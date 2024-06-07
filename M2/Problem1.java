@@ -1,9 +1,10 @@
+// Shahriar Topu - st278 - 06/06/2024
 package M2;
 import java.util.Arrays;
 
 public class Problem1 {
     public static void main(String[] args) {
-        //Don't edit anything here
+        // Don't edit anything here
         int[] a1 = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int[] a2 = new int[]{0, 1, 3, 5, 7, 9, 2, 4, 6, 8, 10};
         int[] a3 = new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
@@ -14,15 +15,18 @@ public class Problem1 {
         processArray(a3);
         processArray(a4);
     }
+    
     static void processArray(int[] arr){
         System.out.println("Processing Array:" + Arrays.toString(arr));
         System.out.println("Odds output:");
-        //hint: use the arr variable; don't diretly use the a1-a4 variables
-        //TODO add/edit code here
         
-        //end add/edit section
+        for (int num : arr) {
+            if (num % 2 != 0) {
+                System.out.print(num + " ");
+            }
+        }
+        
         System.out.println();
         System.out.println("End process");
     }
-    
 }
