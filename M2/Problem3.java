@@ -1,9 +1,6 @@
 // Shahriar Topu - st278 - 06/06/2024
-
 package M2;
-
 import java.util.Arrays;
-
 public class Problem3 {
     public static void main(String[] args) {
         Integer[] a1 = new Integer[]{-1, -2, -3, -4, -5, -6, -7, -8, -9, -10};
@@ -16,7 +13,6 @@ public class Problem3 {
         bePositive(a3);
         bePositive(a4);
     }
-
     static <T> void bePositive(T[] arr){
         System.out.println("Processing Array:" + Arrays.toString(arr));
         Object[] output = new Object[arr.length];
@@ -31,7 +27,6 @@ public class Problem3 {
                 output[i] = Integer.toString(Math.abs(num));
             }
         }
-
         StringBuilder sb = new StringBuilder();
         for (Object i : output) {
             if (sb.length() > 0) {
