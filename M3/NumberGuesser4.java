@@ -1,5 +1,5 @@
 package M3;
-
+// st278 and 06-11-2024
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -16,16 +16,14 @@ public class NumberGuesser4 {
     private boolean pickNewRandom = true;
     private Random random = new Random();
     private String fileName = "ng4.txt";
-    private String[] fileHeaders = { "Level", "Strikes", "Number", "MaxLevel" };// used for demo readability
+    private String[] fileHeaders = { "Level", "Strikes", "Number", "MaxLevel", "MaxStrikes" };
 
     private void saveState() {
-        String[] data = { level + "", strikes + "", number + "", maxLevel + "" };
+        String[] data = { level + "", strikes + "", number + "", maxLevel + "", maxStrikes + "" };
         String output = String.join(",", data);
-        // Note: we don't need a file reference as FileWriter creates the file if it
-        // doesn't exist
         try (FileWriter fw = new FileWriter(fileName)) {
             fw.write(String.join(",", fileHeaders));
-            fw.write("\n");// new line
+            fw.write("\n");
             fw.write(output);
         } catch (IOException e) {
             e.printStackTrace();
@@ -35,20 +33,19 @@ public class NumberGuesser4 {
     private void loadState() {
         File file = new File(fileName);
         if (!file.exists()) {
-            // Not providing output here as it's expected for a fresh start
             return;
         }
         try (Scanner reader = new Scanner(file)) {
             int lineNumber = 0;
             while (reader.hasNextLine()) {
                 String text = reader.nextLine();
-                // System.out.println("Text: " + text);
                 if (lineNumber == 1) {
                     String[] data = text.split(",");
                     String level = data[0];
                     String strikes = data[1];
                     String number = data[2];
                     String maxLevel = data[3];
+                    String maxStrikes = data[4];
                     int temp = strToNum(level);
                     if (temp > -1) {
                         this.level = temp;
@@ -66,12 +63,16 @@ public class NumberGuesser4 {
                     if (temp > -1) {
                         this.maxLevel = temp;
                     }
+                    temp = strToNum(maxStrikes);
+                    if (temp > -1) {
+                        this.maxStrikes = temp;
+                    }
                 }
                 lineNumber++;
             }
-        } catch (FileNotFoundException e) {// specific exception
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (Exception e2) {// any other unhandled exception
+        } catch (Exception e2) {
             e2.printStackTrace();
         }
         System.out.println("Loaded state");
@@ -81,12 +82,6 @@ public class NumberGuesser4 {
                 "I picked a random number between 1-" + (range) + ", let's see if you can guess.");
     }
 
-    /***
-     * Gets a random number between 1 and level.
-     * 
-     * @param level (level to use as upper bounds)
-     * @return number between bounds
-     */
     private void generateNewNumber(int level) {
         int range = 10 + ((level - 1) * 5);
         System.out.println("Welcome to level " + level);
@@ -97,7 +92,7 @@ public class NumberGuesser4 {
 
     private void win() {
         System.out.println("That's right!");
-        level++;// level up!
+        level++;
         strikes = 0;
     }
 
@@ -107,7 +102,6 @@ public class NumberGuesser4 {
             System.out.println("Tired of playing? No problem, see you next time.");
             processed = true;
         }
-        // TODO add other conditions here
         return processed;
     }
 
@@ -131,6 +125,11 @@ public class NumberGuesser4 {
             pickNewRandom = true;
         } else {
             System.out.println("That's wrong");
+            if (guess < number) {
+                System.out.println("Hint: Try a higher number");
+            } else {
+                System.out.println("Hint: Try a lower number");
+            }
             strikes++;
             if (strikes >= maxStrikes) {
                 lose();
@@ -152,11 +151,34 @@ public class NumberGuesser4 {
         return guess;
     }
 
+    private void selectDifficulty(Scanner input) {
+        System.out.println("Select difficulty: easy, medium, hard");
+        String difficulty = input.nextLine().toLowerCase();
+        switch (difficulty) {
+            case "easy":
+                maxStrikes = 10;
+                break;
+            case "medium":
+                maxStrikes = 5;
+                break;
+            case "hard":
+                maxStrikes = 3;
+                break;
+            default:
+                System.out.println("Invalid selection, defaulting to medium difficulty.");
+                maxStrikes = 5;
+                break;
+        }
+        System.out.println("Difficulty set to " + difficulty + ". Max strikes: " + maxStrikes);
+    }
+
     public void start() {
-        try (Scanner input = new Scanner(System.in);) {
+        Scanner input = new Scanner(System.in);
+        try {
             System.out.println("Welcome to NumberGuesser4.0");
             System.out.println("To exit, type the word 'quit'.");
             loadState();
+            selectDifficulty(input);
             do {
                 if (pickNewRandom) {
                     generateNewNumber(level);
@@ -164,25 +186,24 @@ public class NumberGuesser4 {
                     pickNewRandom = false;
                 }
                 System.out.println("Type a number and press enter");
-                // we'll want to use a local variable here
-                // so we can feed it into multiple functions
-                String message = input.nextLine();
-                // early termination check
-                if (processCommands(message)) {
-                    // command handled; don't proceed with game logic
+                if (input.hasNextLine()) {
+                    String message = input.nextLine();
+                    if (processCommands(message)) {
+                        break;
+                    }
+                    int guess = strToNum(message);
+                    processGuess(guess);
+                } else {
+                    System.out.println("No input received.");
                     break;
                 }
-                // this is just to demonstrate we can return a value and pass it into another
-                // method
-                int guess = strToNum(message);
-                processGuess(guess);
-                // the following line is the same as the above two lines
-                // processGuess(getGuess(message));
             } while (true);
         } catch (Exception e) {
             System.out.println("An unexpected error occurred. Goodbye.");
             e.printStackTrace();
             System.out.println(e.getMessage());
+        } finally {
+            input.close();  // Ensure the scanner is closed to release the resource
         }
         System.out.println("Thanks for playing!");
     }
