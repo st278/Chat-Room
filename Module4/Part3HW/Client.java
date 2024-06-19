@@ -1,31 +1,24 @@
 package Module4.Part3HW;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
-import java.util.concurrent.CompletableFuture;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-/**
- * Demoing bi-directional communication between client and server in a
- * multi-client scenario
- */
 public class Client {
 
-    private Socket server = null;
-    private ObjectOutputStream out = null;
-    private ObjectInputStream in = null;
-    final Pattern ipAddressPattern = Pattern
-            .compile("/connect\\s+(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}:\\d{3,5})");
-    final Pattern localhostPattern = Pattern.compile("/connect\\s+(localhost:\\d{3,5})");
-    private volatile boolean isRunning = true; // volatile for thread-safe visibility
+    Socket server = null;
+    ObjectOutputStream out = null;
+    ObjectInputStream in = null;
+    final String ipAddressPattern = "connect\\s+(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}:\\d{3,5})";
+    final String localhostPattern = "connect\\s+(localhost:\\d{3,5})";
+    boolean isRunning = false;
+    private Thread inputThread;
+    private Thread fromServerThread;
 
     public Client() {
-        System.out.println("Client Created");
+        System.out.println("");
     }
 
     public boolean isConnected() {
@@ -34,13 +27,14 @@ public class Client {
         }
         // https://stackoverflow.com/a/10241044
         // Note: these check the client's end of the socket connect; therefore they
-        // don't really help determine if the server had a problem
-        // and is just for lesson's sake
+        // don't really help determine
+        // if the server had a problem
         return server.isConnected() && !server.isClosed() && !server.isInputShutdown() && !server.isOutputShutdown();
+
     }
 
     /**
-     * Takes an IP address and a port to attempt a socket connection to a server.
+     * Takes an ip address and a port to attempt a socket connection to a server.
      * 
      * @param address
      * @param port
@@ -54,8 +48,7 @@ public class Client {
             // channel to listen to server
             in = new ObjectInputStream(server.getInputStream());
             System.out.println("Client connected");
-            // Use CompletableFuture to run listenToServer() in a separate thread
-            CompletableFuture.runAsync(this::listenToServer);
+            listenForServerMessage();
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -67,10 +60,10 @@ public class Client {
     /**
      * <p>
      * Check if the string contains the <i>connect</i> command
-     * followed by an IP address and port or localhost and port.
+     * followed by an ip address and port or localhost and port.
      * </p>
      * <p>
-     * Example format: 123.123.123.123:3000
+     * Example format: 123.123.123:3000
      * </p>
      * <p>
      * Example format: localhost:3000
@@ -78,12 +71,16 @@ public class Client {
      * https://www.w3schools.com/java/java_regex.asp
      * 
      * @param text
-     * @return true if the text is a valid connection command
+     * @return
      */
     private boolean isConnection(String text) {
-        Matcher ipMatcher = ipAddressPattern.matcher(text);
-        Matcher localhostMatcher = localhostPattern.matcher(text);
-        return ipMatcher.matches() || localhostMatcher.matches();
+        // https://www.w3schools.com/java/java_regex.asp
+        return text.matches(ipAddressPattern)
+                || text.matches(localhostPattern);
+    }
+
+    private boolean isQuit(String text) {
+        return text.equalsIgnoreCase("quit");
     }
 
     /**
@@ -93,133 +90,143 @@ public class Client {
      * </p>
      * 
      * @param text
-     * @return true if the text was a command or triggered a command
+     * @return true if a text was a command or triggered a command
      */
-    private boolean processClientCommand(String text) {
+    private boolean processCommand(String text) {
         if (isConnection(text)) {
-            // replaces multiple spaces with a single space
+            // replaces multiple spaces with single space
             // splits on the space after connect (gives us host and port)
             // splits on : to get host as index 0 and port as index 1
             String[] parts = text.trim().replaceAll(" +", " ").split(" ")[1].split(":");
             connect(parts[0].trim(), Integer.parseInt(parts[1].trim()));
             return true;
-        } else if ("/quit".equalsIgnoreCase(text)) {
-            close();
+        } else if (isQuit(text)) {
+            isRunning = false;
             return true;
         }
         return false;
     }
 
-    public void start() throws IOException {
-        System.out.println("Client starting");
+    private void listenForKeyboard() {
+        inputThread = new Thread() {
+            @Override
+            public void run() {
+                System.out.println("Listening for input");
+                try (Scanner si = new Scanner(System.in);) {
+                    String line = "";
+                    isRunning = true;
+                    while (isRunning) {
+                        try {
+                            System.out.println("Waiting for input");
+                            line = si.nextLine();
+                            if (!processCommand(line)) {
+                                if (isConnected()) {
+                                    out.writeObject(line);
 
-        // Use CompletableFuture to run listenToInput() in a separate thread
-        CompletableFuture<Void> inputFuture = CompletableFuture.runAsync(this::listenToInput);
-
-        // Wait for inputFuture to complete to ensure proper termination
-        inputFuture.join();
-    }
-
-    /**
-     * Listens for messages from the server
-     */
-    private void listenToServer() {
-        try {
-            while (isRunning && isConnected()) {
-                String fromServer = (String) in.readObject(); // blocking read
-                if (fromServer != null) {
-                    System.out.println("(Server)" + fromServer);
-                } else {
-                    System.out.println("Server disconnected");
-                    break;
-                }
-            }
-        } catch (ClassCastException | ClassNotFoundException cce) {
-            System.err.println("Error reading object as specified type: " + cce.getMessage());
-            cce.printStackTrace();
-        } catch (IOException e) {
-            if (isRunning) {
-                System.out.println("Connection dropped");
-                e.printStackTrace();
-            }
-        } finally {
-            closeServerConnection();
-        }
-        System.out.println("listenToServer thread stopped");
-    }
-
-    /**
-     * Listens for keyboard input from the user
-     */
-    private void listenToInput() {
-        try (Scanner si = new Scanner(System.in)) {
-            System.out.println("Waiting for input"); //moved here to avoid console spam
-            while (isRunning) { // Run until isRunning is false
-                String line = si.nextLine();
-                if (!processClientCommand(line)) {
-                    if (isConnected()) {
-                        out.writeObject(line);
-                        out.flush(); // good practice to ensure data is written out immediately
-                    } else {
-                        System.out.println("Not connected to server (hint: type `/connect host:port` without the quotes and replace host/port with the necessary info)");
+                                } else {
+                                    System.out.println("Not connected to server");
+                                }
+                            }
+                        } catch (Exception e) {
+                            System.out.println("Connection dropped");
+                            break;
+                        }
                     }
+                    System.out.println("Exited loop");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    close();
                 }
             }
-        } catch (IOException ioException) {
-            System.out.println("Error in listentToInput()");
-            ioException.printStackTrace();
-        }
-        System.out.println("listenToInput thread stopped");
+        };
+        inputThread.start();
     }
 
-    /**
-     * Closes the client connection and associated resources
-     */
+    private void listenForServerMessage() {
+        fromServerThread = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    String fromServer;
+
+                    // while we're connected, listen for strings from server
+                    while (!server.isClosed() && !server.isInputShutdown()
+                            && (fromServer = (String) in.readObject().toString()) != null) {
+
+                        System.out.println(fromServer);
+                    }
+                    System.out.println("Loop exited");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    if (!server.isClosed()) {
+                        System.out.println("Server closed connection");
+                    } else {
+                        System.out.println("Connection closed");
+                    }
+                } finally {
+                    close();
+                    System.out.println("Stopped listening to server input");
+                }
+            }
+        };
+        fromServerThread.start();// start the thread
+
+    }
+
+    public void start() throws IOException {
+        listenForKeyboard();
+    }
+
     private void close() {
-        isRunning = false;
-        closeServerConnection();
-        System.out.println("Client terminated");
-        // System.exit(0); // Terminate the application
-    }
-
-    /**
-     * Closes the server connection and associated resources
-     */
-    private void closeServerConnection() {
         try {
-            if (out != null) {
-                System.out.println("Closing output stream");
-                out.close();
-            }
+            inputThread.interrupt();
+        } catch (Exception e) {
+            System.out.println("Error interrupting input");
+            e.printStackTrace();
+        }
+        try {
+            fromServerThread.interrupt();
+        } catch (Exception e) {
+            System.out.println("Error interrupting listener");
+            e.printStackTrace();
+        }
+        try {
+            System.out.println("Closing output stream");
+            out.close();
+        } catch (NullPointerException ne) {
+            System.out.println("Server was never opened so this exception is ok");
         } catch (Exception e) {
             e.printStackTrace();
         }
         try {
-            if (in != null) {
-                System.out.println("Closing input stream");
-                in.close();
-            }
+            System.out.println("Closing input stream");
+            in.close();
+        } catch (NullPointerException ne) {
+            System.out.println("Server was never opened so this exception is ok");
         } catch (Exception e) {
             e.printStackTrace();
         }
         try {
-            if (server != null) {
-                System.out.println("Closing connection");
-                server.close();
-                System.out.println("Closed socket");
-            }
+            System.out.println("Closing connection");
+            server.close();
+            System.out.println("Closed socket");
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (NullPointerException ne) {
+            System.out.println("Server was never opened so this exception is ok");
         }
     }
 
     public static void main(String[] args) {
         Client client = new Client();
+
         try {
+            // if start is private, it's valid here since this main is part of the class
             client.start();
         } catch (IOException e) {
-            System.out.println("Exception from main()");
             e.printStackTrace();
         }
     }
+
 }

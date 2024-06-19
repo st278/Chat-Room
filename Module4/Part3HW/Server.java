@@ -11,6 +11,10 @@ public class Server {
     // Use ConcurrentHashMap for thread-safe client management
     private final ConcurrentHashMap<Long, ServerThread> connectedClients = new ConcurrentHashMap<>();
     private boolean isRunning = true;
+    
+    // Game-related variables
+    private boolean isGameActive = false;
+    private int hiddenNumber;
 
     private void start(int port) {
         this.port = port;
@@ -35,8 +39,10 @@ public class Server {
             System.out.println("Closing server socket");
         }
     }
+
     /**
      * Callback passed to ServerThread to inform Server they're ready to receive data
+     *
      * @param sClient
      */
     private void onClientInitialized(ServerThread sClient) {
@@ -44,12 +50,13 @@ public class Server {
         connectedClients.put(sClient.getClientId(), sClient);
         relay(String.format("*User[%s] connected*", sClient.getClientId()), null);
     }
+
     /**
      * Takes a ServerThread and removes them from the Server
      * Adding the synchronized keyword ensures that only one thread can execute
      * these methods at a time,
      * preventing concurrent modification issues and ensuring thread safety
-     * 
+     *
      * @param client
      */
     protected synchronized void disconnect(ServerThread client) {
@@ -68,13 +75,12 @@ public class Server {
      * Adding the synchronized keyword ensures that only one thread can execute
      * these methods at a time,
      * preventing concurrent modification issues and ensuring thread safety
-     * 
+     *
      * @param message
-     * @param sender ServerThread (client) sending the message or null if it's a server-generated message
+     * @param sender  ServerThread (client) sending the message or null if it's a server-generated message
      */
     protected synchronized void relay(String message, ServerThread sender) {
         if (sender != null && processCommand(message, sender)) {
-
             return;
         }
         // let's temporarily use the thread id as the client identifier to
@@ -89,7 +95,6 @@ public class Server {
         // to be sent
         // Note: this uses a lambda expression for each item in the values() collection,
         // it's one way we can safely remove items during iteration
-        
         connectedClients.values().removeIf(client -> {
             boolean failedToSend = !client.send(formattedMessage);
             if (failedToSend) {
@@ -102,13 +107,13 @@ public class Server {
 
     /**
      * Attempts to see if the message is a command and process its action
-     * 
+     *
      * @param message
      * @param sender
      * @return true if it was a command, false otherwise
      */
     private boolean processCommand(String message, ServerThread sender) {
-        if(sender == null){
+        if (sender == null) {
             return false;
         }
         System.out.println("Checking command: " + message);
@@ -119,9 +124,94 @@ public class Server {
                 disconnect(removedClient);
             }
             return true;
+        } else if ("/start".equalsIgnoreCase(message)) {
+            startGame();
+            return true;
+        } else if ("/stop".equalsIgnoreCase(message)) {
+            stopGame();
+            return true;
+        } else if (message.startsWith("/guess")) {
+            if (isGameActive) {
+                handleGuess(message, sender);
+            } else {
+                relay("There's no active game to guess in.", null);
+            }
+            return true;
+        } else if ("/flip".equalsIgnoreCase(message) || "/toss".equalsIgnoreCase(message) || "/coin".equalsIgnoreCase(message)) {
+            flipCoin(sender);
+            return true;
         }
         // add more "else if" as needed
         return false;
+    }
+
+    /**
+     * Starts the number guessing game
+     */
+    private void startGame() {
+        if (!isGameActive) {
+            isGameActive = true;
+            hiddenNumber = generateHiddenNumber();
+            relay("Game started! Guess a number between 1 and 10 using /guess [number].", null);
+        } else {
+            relay("Game is already active.", null);
+        }
+    }
+    // st278 and 06/18/2024
+    /**
+     * Stops the number guessing game
+     */
+    private void stopGame() {
+        if (isGameActive) {
+            isGameActive = false;
+            relay("Game stopped. Guesses are no longer accepted.", null);
+        } else {
+            relay("There is no active game to stop.", null);
+        }
+    }
+
+    /**
+     * Handles a guess command from a client
+     *
+     * @param message
+     * @param sender
+     */
+    private void handleGuess(String message, ServerThread sender) {
+        try {
+            // Extract the guess from the message
+            int guess = Integer.parseInt(message.split("\\s+")[1]);
+
+            // Check if the guess matches the hidden number
+            if (guess == hiddenNumber) {
+                relay(String.format("%s guessed %d and it's correct!", sender.getClientId(), guess), null);
+                stopGame(); // Stop the game after a correct guess
+            } else {
+                relay(String.format("%s guessed %d but it was not correct.", sender.getClientId(), guess), null);
+            }
+        } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+            relay("Invalid guess format. Use /guess [number].", null);
+        }
+    }
+
+    /**
+     * Generates a random number between 1 and 10
+     *
+     * @return
+     */
+    private int generateHiddenNumber() {
+        return (int) (Math.random() * 10) + 1; // Generates a random number between 1 and 10
+    }
+
+    // st278 and 06/18/2024
+    /**
+     * Simulates a coin flip and relays the result to all clients
+     *
+     * @param sender
+     */
+    private void flipCoin(ServerThread sender) {
+        String[] outcomes = {"heads", "tails"};
+        String result = outcomes[(int) (Math.random() * 2)];
+        relay(String.format("%s flipped a coin and got %s", sender.getClientId(), result), null);
     }
 
     public static void main(String[] args) {

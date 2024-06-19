@@ -12,14 +12,15 @@ import java.util.function.Consumer;
  */
 public class ServerThread extends Thread {
     private Socket client; // communication directly to "my" client
-    private boolean isRunning = false; //control variable to stop this thread
-    private ObjectOutputStream out; //exposed here for send()
-    private Server server;// ref to our server so we can call methods on it
-    // more easily
+    private boolean isRunning = false; // control variable to stop this thread
+    private ObjectOutputStream out; // exposed here for send()
+    private Server server; // ref to our server so we can call methods on it more easily
     private long clientId;
-    private Consumer<ServerThread> onInitializationComplete; //callback to inform when this object is ready
+    private Consumer<ServerThread> onInitializationComplete; // callback to inform when this object is ready
+
     /**
      * A wrapper method so we don't need to keep typing out the long/complex sysout line inside
+     * 
      * @param message
      */
     private void info(String message) {
@@ -28,9 +29,11 @@ public class ServerThread extends Thread {
 
     /**
      * Wraps the Socket connection and takes a Server reference and a callback
+     * 
      * @param myClient
      * @param server
-     * @param onInitializationComplete method to inform listener that this object is ready
+     * @param onInitializationComplete method to inform listener that this object is
+     *                                 ready
      */
     protected ServerThread(Socket myClient, Server server, Consumer<ServerThread> onInitializationComplete) {
         Objects.requireNonNull(myClient, "Client socket cannot be null");
@@ -44,9 +47,11 @@ public class ServerThread extends Thread {
         this.onInitializationComplete = onInitializationComplete;
 
     }
-    public long getClientId(){
+
+    public long getClientId() {
         return this.clientId;
     }
+
     /**
      * One of the two ways to get this to exit the listen loop
      */
@@ -59,6 +64,7 @@ public class ServerThread extends Thread {
 
     /**
      * Sends the message over the socket
+     * 
      * @param message
      * @return true if no errors were encountered
      */
@@ -86,26 +92,24 @@ public class ServerThread extends Thread {
             onInitializationComplete.accept(this); // Notify server that initialization is complete
             String fromClient;
             /**
-             * isRunning is a flag to let us manage the loop exit condition
-             * fromClient (in.readObject()) is a blocking method that waits until data is received
-             *  - null would likely mean a disconnect so we use a "set and check" logic to alternatively exit the loop
+             * isRunning is a flag to let us manage the loop exit condition fromClient
+             * (in.readObject()) is a blocking method that waits until data is received - null
+             * would likely mean a disconnect so we use a "set and check" logic to
+             * alternatively exit the loop
              */
             while (isRunning) {
-                try{
+                try {
                     fromClient = (String) in.readObject(); // blocking method
                     if (fromClient != null) {
                         info("Received from my client: " + fromClient);
                         server.relay(fromClient, this);
-                    }
-                    else{
+                    } else {
                         throw new IOException("Connection interrupted"); // Specific exception for a clean break
                     }
-                }
-                catch (ClassCastException | ClassNotFoundException cce) {
+                } catch (ClassCastException | ClassNotFoundException cce) {
                     System.err.println("Error reading object as specified type: " + cce.getMessage());
                     cce.printStackTrace();
-                }
-                catch (IOException e) {
+                } catch (IOException e) {
                     if (Thread.currentThread().isInterrupted()) {
                         info("Thread interrupted during read (likely from the disconnect() method)");
                         break;
