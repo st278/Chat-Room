@@ -114,7 +114,8 @@ public class NumberGuesser4 {
             level = 1;
         }
     }
-
+// st278 and 06-11-2024
+ main
     private void processGuess(int guess) {
         if (guess < 0) {
             return;
@@ -151,6 +152,9 @@ public class NumberGuesser4 {
         return guess;
     }
 
+
+    // st278 and 06-11-2024
+ main
     private void selectDifficulty(Scanner input) {
         System.out.println("Select difficulty: easy, medium, hard");
         String difficulty = input.nextLine().toLowerCase();
