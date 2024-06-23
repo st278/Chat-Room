@@ -1,5 +1,4 @@
 package Project;
-
 public class ConnectionPayload extends Payload {
     private String clientName;
     private boolean isConnect;
