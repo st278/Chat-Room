@@ -1,4 +1,5 @@
 package Project;
+import Project.TextFX.Color;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -9,8 +10,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import Project.TextFX.Color;
 
 /**
  * Demoing bi-directional communication between client and server in a
@@ -156,6 +155,7 @@ public enum Client {
                         sendJoinRoom(commandValue);
                         wasCommand = true;
                         break;
+                        //st278 and 06-24-2024
                     // Note: these are to disconnect, they're not for changing rooms
                     case DISCONNECT:
                     case LOGOFF:
@@ -259,6 +259,7 @@ public enum Client {
     /**
      * Listens for messages from the server
      */
+    //st278 - 06-24-2024
     private void listenToServer() {
         try {
             while (isRunning && isConnected()) {
@@ -288,6 +289,7 @@ public enum Client {
     /**
      * Listens for keyboard input from the user
      */
+    // st278 - 06-24-2024
     private void listenToInput() {
         try (Scanner si = new Scanner(System.in)) {
             System.out.println("Waiting for input"); // moved here to avoid console spam
@@ -402,6 +404,7 @@ public enum Client {
 
     // payload processors
 
+    // st278 and 06-24-2024
     private void processDisconnect(long clientId, String clientName) {
         System.out.println(
                 TextFX.colorize(String.format("*%s disconnected*",

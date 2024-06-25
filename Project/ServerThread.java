@@ -7,6 +7,7 @@ import java.util.function.Consumer;
  * A server-side representation of a single client.
  * This class is more about the data and abstracted communication
  */
+//st278 and 06-24-2024
 public class ServerThread extends BaseServerThread {
     public static final long DEFAULT_CLIENT_ID = -1;
     private Room currentRoom;
@@ -32,7 +33,7 @@ public class ServerThread extends BaseServerThread {
         this.onInitializationComplete = onInitializationComplete;
 
     }
-
+    //st278 and 06-24-2024
     public void setClientName(String name) {
         if (name == null) {
             throw new NullPointerException("Client name can't be null");

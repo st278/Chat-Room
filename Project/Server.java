@@ -19,7 +19,7 @@ public enum Server {
             shutdown();
         }));
     }
-
+    // st278 and 06-24-2024
     private void start(int port) {
         this.port = port;
         // server listening
@@ -49,6 +49,7 @@ public enum Server {
     /**
      * Gracefully disconnect clients
      */
+    //st278 and 06-24-2024
     private void shutdown() {
         try {
             //chose removeIf over forEach to avoid potential ConcurrentModificationException
@@ -85,6 +86,7 @@ public enum Server {
      * @param name Unique name of the room
      * @return true if it was created and false if it wasn't
      */
+    //st278 and 06-24-2024
     protected boolean createRoom(String name) {
         final String nameCheck = name.toLowerCase();
         if (rooms.containsKey(nameCheck)) {

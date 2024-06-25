@@ -1,6 +1,7 @@
 package Project;
 import java.util.concurrent.ConcurrentHashMap;
 
+//st278 and 06-24-2024
 public class Room implements AutoCloseable{
     private String name;// unique name of the Room
     private volatile boolean isRunning = false;
@@ -41,7 +42,7 @@ public class Room implements AutoCloseable{
         info(String.format("%s[%s] joined the Room[%s]", client.getClientName(), client.getClientId(), getName()));
 
     }
-
+    // st278 and 06-24-2024
     protected synchronized void removedClient(ServerThread client) {
         if (!isRunning) { // block action if Room isn't running
             return;
