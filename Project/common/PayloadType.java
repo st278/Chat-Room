@@ -1,4 +1,5 @@
-package Project;
+package Project.common;
+
 public enum PayloadType {
     CLIENT_CONNECT, // client requesting to connect to server (passing of initialization data [name])
     CLIENT_ID,  // server sending client id
@@ -6,5 +7,8 @@ public enum PayloadType {
     DISCONNECT,  // distinct disconnect action
     ROOM_CREATE,
     ROOM_JOIN, // join/leave room based on boolean
-    MESSAGE // sender and message
+    MESSAGE, // sender and message,
+    ROOM_LIST, // client: query for rooms, server: result of query
+    ROLL_COMMAND, 
+    FLIP_COMMAND
 }

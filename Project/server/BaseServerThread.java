@@ -1,5 +1,7 @@
-package Project;
+package Project.server;
 
+import Project.common.LoggerUtil;
+import Project.common.Payload;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -92,23 +94,20 @@ public abstract class BaseServerThread extends Thread {
                     }
                 }
                 catch (ClassCastException | ClassNotFoundException cce) {
-                    System.err.println("Error reading object as specified type: " + cce.getMessage());
-                    cce.printStackTrace();
+                    LoggerUtil.INSTANCE.severe("Error reading object as specified type: ", cce);
                 }
                 catch (IOException e) {
                     if (Thread.currentThread().isInterrupted()) {
                         info("Thread interrupted during read (likely from the disconnect() method)");
                         break;
                     }
-                    info("IO exception while reading from client");
-                    e.printStackTrace();
+                    LoggerUtil.INSTANCE.severe("IO exception while reading from client",e);
                     break;
                 }
             } // close while loop
         } catch (Exception e) {
             // happens when client disconnects
-            info("General Exception");
-            e.printStackTrace();
+            LoggerUtil.INSTANCE.severe("General Exception: ", e);
             info("My Client disconnected");
         } finally {
             isRunning = false;
