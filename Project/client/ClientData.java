@@ -1,4 +1,5 @@
-package Project;
+package Project.client;
+
 public class ClientData {
     public static long DEFAULT_CLIENT_ID = -1L;
     private long clientId = ClientData.DEFAULT_CLIENT_ID;

@@ -1,22 +1,32 @@
-package Project;
+package Project.server;
 import java.util.concurrent.ConcurrentHashMap;
 
-//st278 and 06-24-2024
+import Project.common.LoggerUtil;
+import Project.common.Payload;
+import Project.common.RollPayload;
+
+
+
 public class Room implements AutoCloseable{
     private String name;// unique name of the Room
-    private volatile boolean isRunning = false;
+    private static final String BOLD_SYMBOL = "**";
+    private static final String ITALIC_SYMBOL = "_";
+    private static final String UNDERLINE_SYMBOL = "__";
+    private static final String COLOR_START_SYMBOL = "#";
+    private static final String COLOR_END_SYMBOL = "#";
+    protected volatile boolean isRunning = false;
     private ConcurrentHashMap<Long, ServerThread> clientsInRoom = new ConcurrentHashMap<Long, ServerThread>();
 
     public final static String LOBBY = "lobby";
 
     private void info(String message) {
-        System.out.println(String.format("Room[%s]: %s", name, message));
+        LoggerUtil.INSTANCE.info(String.format("Room[%s]: %s", name, message));
     }
 
     public Room(String name) {
         this.name = name;
         isRunning = true;
-        System.out.println(String.format("Room[%s] created", this.name));
+        info("created");
     }
 
     public String getName() {
@@ -42,7 +52,7 @@ public class Room implements AutoCloseable{
         info(String.format("%s[%s] joined the Room[%s]", client.getClientName(), client.getClientId(), getName()));
 
     }
-    // st278 and 06-24-2024
+
     protected synchronized void removedClient(ServerThread client) {
         if (!isRunning) { // block action if Room isn't running
             return;
@@ -51,6 +61,7 @@ public class Room implements AutoCloseable{
         // happen before removal so leaving client gets the data
         sendRoomStatus(client.getClientId(), client.getClientName(), false);
         clientsInRoom.remove(client.getClientId());
+        LoggerUtil.INSTANCE.fine("Clients remaining in Room: " + clientsInRoom.size());
 
         info(String.format("%s[%s] left the room", client.getClientName(), client.getClientId(), getName()));
 
@@ -58,6 +69,34 @@ public class Room implements AutoCloseable{
 
     }
 
+    //st278 and 07/08/2024
+    protected void handleRoll(ServerThread sender, RollPayload payload) {
+        LoggerUtil.INSTANCE.info("Room handling roll command: " + payload);
+        int result;
+        String message;
+    
+        if (payload.getRollType().equals("single")) {
+            result = (int) (Math.random() * payload.getMax()) + 1;
+            message = String.format("%s rolled %d and got %d", payload.getClientId(), payload.getMax(), result);
+        } else {
+            result = 0;
+            for (int i = 0; i < payload.getNumDice(); i++) {
+                result += (int) (Math.random() * payload.getSides()) + 1;
+            }
+            message = String.format("%s rolled %dd%d and got %d", payload.getClientId(), payload.getNumDice(), payload.getSides(), result);
+        }
+    
+        LoggerUtil.INSTANCE.info("Sending roll result: " + message);
+        sendMessage(sender, message);
+    }
+    
+    protected void handleFlip(ServerThread sender, Payload payload) {
+        LoggerUtil.INSTANCE.info("Room handling flip command: " + payload);
+        String result = Math.random() < 0.5 ? "heads" : "tails";
+        String message = String.format("%s flipped a coin and got %s", payload.getClientId(), result);
+        LoggerUtil.INSTANCE.info("Sending flip result: " + message);
+        sendMessage(sender, message);
+    }
     /**
      * Takes a ServerThread and removes them from the Server
      * Adding the synchronized keyword ensures that only one thread can execute
@@ -75,9 +114,11 @@ public class Room implements AutoCloseable{
         client.disconnect();
         // removedClient(client); // <-- use this just for normal room leaving
         clientsInRoom.remove(client.getClientId());
+        LoggerUtil.INSTANCE.fine("Clients remaining in Room: " + clientsInRoom.size());
         
         // Improved logging with user data
         info(String.format("%s[%s] disconnected", client.getClientName(), id));
+        autoCleanup();
     }
 
     protected synchronized void disconnectAll() {
@@ -90,6 +131,7 @@ public class Room implements AutoCloseable{
             return true;
         });
         info("Disconnect All finished");
+        autoCleanup();
     }
 
     /**
@@ -124,7 +166,7 @@ public class Room implements AutoCloseable{
      * @param client
      */
     protected synchronized void sendDisconnect(ServerThread client) {
-        info(String.format("sending disconnect status to %s recipients", getName(), clientsInRoom.size()));
+        info(String.format("sending disconnect status to %s recipients", clientsInRoom.size()));
         clientsInRoom.values().removeIf(clientInRoom -> {
             boolean failedToSend = !clientInRoom.sendDisconnect(client.getClientId(), client.getClientName());
             if (failedToSend) {
@@ -157,7 +199,7 @@ public class Room implements AutoCloseable{
      * @param isConnect
      */
     protected synchronized void sendRoomStatus(long clientId, String clientName, boolean isConnect) {
-        info(String.format("sending room status to %s recipients", getName(), clientsInRoom.size()));
+        info(String.format("sending room status to %s recipients", clientsInRoom.size()));
         clientsInRoom.values().removeIf(client -> {
             boolean failedToSend = !client.sendRoomAction(clientId, clientName, getName(), isConnect);
             if (failedToSend) {
@@ -182,20 +224,14 @@ public class Room implements AutoCloseable{
      *                server-generated message
      */
     protected synchronized void sendMessage(ServerThread sender, String message) {
-        if (!isRunning) { // block action if Room isn't running
+        if (!isRunning) {
             return;
         }
-
-        // Note: any desired changes to the message must be done before this section
+        String formattedMessage = processTextFormatting(message);
         long senderId = sender == null ? ServerThread.DEFAULT_CLIENT_ID : sender.getClientId();
-
-        // loop over clients and send out the message; remove client if message failed
-        // to be sent
-        // Note: this uses a lambda expression for each item in the values() collection,
-        // it's one way we can safely remove items during iteration
-        info(String.format("sending message to %s recipients: %s", getName(), clientsInRoom.size(), message));
+        info(String.format("sending message to %s recipients: %s", clientsInRoom.size(), formattedMessage));
         clientsInRoom.values().removeIf(client -> {
-            boolean failedToSend = !client.sendMessage(senderId, message);
+            boolean failedToSend = !client.sendMessage(senderId, formattedMessage);
             if (failedToSend) {
                 info(String.format("Removing disconnected client[%s] from list", client.getClientId()));
                 disconnect(client);
@@ -206,6 +242,7 @@ public class Room implements AutoCloseable{
     // end send data to client(s)
 
     // receive data from ServerThread
+    
     protected void handleCreateRoom(ServerThread sender, String room) {
         if (Server.INSTANCE.createRoom(room)) {
             Server.INSTANCE.joinRoom(room, sender);
@@ -220,9 +257,60 @@ public class Room implements AutoCloseable{
         }
     }
 
+    protected void handleListRooms(ServerThread sender, String roomQuery){
+        sender.sendRooms(Server.INSTANCE.listRooms(roomQuery));
+    }
+
     protected void clientDisconnect(ServerThread sender) {
         disconnect(sender);
     }
 
+    // st278 and 07/08/2024
+    private String processTextFormatting(String message) {
+        StringBuilder processedMessage = new StringBuilder();
+        boolean isBold = false;
+        boolean isItalic = false;
+        boolean isUnderline = false;
+        String currentColor = null;
+    
+        for (int i = 0; i < message.length(); i++) {
+            if (message.startsWith(BOLD_SYMBOL, i)) {
+                processedMessage.append(isBold ? "</b>" : "<b>");
+                isBold = !isBold;
+                i += BOLD_SYMBOL.length() - 1;
+            } else if (message.startsWith(ITALIC_SYMBOL, i)) {
+                processedMessage.append(isItalic ? "</i>" : "<i>");
+                isItalic = !isItalic;
+                i += ITALIC_SYMBOL.length() - 1;
+            } else if (message.startsWith(UNDERLINE_SYMBOL, i)) {
+                processedMessage.append(isUnderline ? "</u>" : "<u>");
+                isUnderline = !isUnderline;
+                i += UNDERLINE_SYMBOL.length() - 1;
+            } else if (message.startsWith(COLOR_START_SYMBOL, i)) {
+                int colorEnd = message.indexOf(COLOR_END_SYMBOL, i + 1);
+                if (colorEnd != -1) {
+                    String color = message.substring(i + 1, colorEnd);
+                    if (currentColor != null) {
+                        processedMessage.append("</").append(currentColor).append(">");
+                    }
+                    currentColor = color;
+                    processedMessage.append("<").append(color).append(">");
+                    i = colorEnd;
+                } else {
+                    processedMessage.append(message.charAt(i));
+                }
+            } else {
+                processedMessage.append(message.charAt(i));
+            }
+        }
+    
+        // Close any open tags
+        if (isBold) processedMessage.append("</b>");
+        if (isItalic) processedMessage.append("</i>");
+        if (isUnderline) processedMessage.append("</u>");
+        if (currentColor != null) processedMessage.append("</").append(currentColor).append(">");
+    
+        return processedMessage.toString();
+    }
     // end receive data from ServerThread
 }

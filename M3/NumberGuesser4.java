@@ -154,7 +154,7 @@ public class NumberGuesser4 {
 
 
     // st278 and 06-11-2024
- main
+    main
     private void selectDifficulty(Scanner input) {
         System.out.println("Select difficulty: easy, medium, hard");
         String difficulty = input.nextLine().toLowerCase();

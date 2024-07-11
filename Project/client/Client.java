@@ -1,10 +1,19 @@
-package Project;
-import Project.TextFX.Color;
+package Project.client;
+
+import Project.common.ConnectionPayload;
+import Project.common.LoggerUtil;
+import Project.common.Payload;
+import Project.common.PayloadType;
+import Project.common.RollPayload;
+import Project.common.RoomResultsPayload;
+import Project.common.TextFX;
+import Project.common.TextFX.Color;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
@@ -18,6 +27,15 @@ import java.util.regex.Pattern;
 public enum Client {
     INSTANCE;
 
+    {
+        // statically initialize the client-side LoggerUtil
+        LoggerUtil.LoggerConfig config = new LoggerUtil.LoggerConfig();
+        config.setFileSizeLimit(2048 * 1024); // 2MB
+        config.setFileCount(1);
+        config.setLogLocation("client.log");
+        // Set the logger configuration
+        LoggerUtil.INSTANCE.setConfig(config);
+    }
     private Socket server = null;
     private ObjectOutputStream out = null;
     private ObjectInputStream in = null;
@@ -32,14 +50,17 @@ public enum Client {
     private final String COMMAND_CHARACTER = "/";
     private final String CREATE_ROOM = "createroom";
     private final String JOIN_ROOM = "joinroom";
+    private final String LIST_ROOMS = "listrooms";
     private final String DISCONNECT = "disconnect";
     private final String LOGOFF = "logoff";
     private final String LOGOUT = "logout";
     private final String SINGLE_SPACE = " ";
+    private static final String ROLL_COMMAND = "/roll";
+    private static final String FLIP_COMMAND = "/flip";
 
     // needs to be private now that the enum logic is handling this
     private Client() {
-        System.out.println("Client Created");
+        LoggerUtil.INSTANCE.info("Client Created");
         myData = new ClientData();
     }
 
@@ -68,13 +89,13 @@ public enum Client {
             out = new ObjectOutputStream(server.getOutputStream());
             // channel to listen to server
             in = new ObjectInputStream(server.getInputStream());
-            System.out.println("Client connected");
+            LoggerUtil.INSTANCE.info("Client connected");
             // Use CompletableFuture to run listenToServer() in a separate thread
             CompletableFuture.runAsync(this::listenToServer);
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            LoggerUtil.INSTANCE.warning("Unknown host", e);
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerUtil.INSTANCE.severe("IOException", e);
         }
         return isConnected();
     }
@@ -116,6 +137,13 @@ public enum Client {
                 System.out.println(TextFX.colorize("Name must be set first via /name command", Color.RED));
                 return true;
             }
+            if (text.startsWith(ROLL_COMMAND)) {
+                processRollCommand(text.substring(ROLL_COMMAND.length()).trim());
+                return true;
+            } else if (text.equals(FLIP_COMMAND)) {
+                processFlipCommand();
+                return true;
+            }
             // replaces multiple spaces with a single space
             // splits on the space after connect (gives us host and port)
             // splits on : to get host as index 0 and port as index 1
@@ -155,7 +183,10 @@ public enum Client {
                         sendJoinRoom(commandValue);
                         wasCommand = true;
                         break;
-                        //st278 and 06-24-2024
+                    case LIST_ROOMS:
+                        sendListRooms(commandValue);
+                        wasCommand = true;
+                        break;
                     // Note: these are to disconnect, they're not for changing rooms
                     case DISCONNECT:
                     case LOGOFF:
@@ -163,14 +194,26 @@ public enum Client {
                         sendDisconnect();
                         wasCommand = true;
                         break;
-                }
+                
+                    }
                 return wasCommand;
             }
         }
         return false;
     }
-
+    
     // send methods to pass data to the ServerThread
+
+    /**
+     * Sends a search to the server-side to get a list of potentially matching Rooms
+     * @param roomQuery optional partial match search String
+     */
+    private void sendListRooms(String roomQuery) {
+        Payload p = new Payload();
+        p.setPayloadType(PayloadType.ROOM_LIST);
+        p.setMessage(roomQuery);
+        send(p);
+    }
 
     /**
      * Sends the room name we intend to create
@@ -240,14 +283,14 @@ public enum Client {
             out.writeObject(p);
             out.flush();
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerUtil.INSTANCE.severe("Socket send exception", e);
         }
 
     }
     // end send methods
 
     public void start() throws IOException {
-        System.out.println("Client starting");
+        LoggerUtil.INSTANCE.info("Client starting");
 
         // Use CompletableFuture to run listenToInput() in a separate thread
         CompletableFuture<Void> inputFuture = CompletableFuture.runAsync(this::listenToInput);
@@ -259,7 +302,7 @@ public enum Client {
     /**
      * Listens for messages from the server
      */
-    //st278 - 06-24-2024
+
     private void listenToServer() {
         try {
             while (isRunning && isConnected()) {
@@ -268,28 +311,25 @@ public enum Client {
                     // System.out.println(fromServer);
                     processPayload(fromServer);
                 } else {
-                    System.out.println("Server disconnected");
+                    LoggerUtil.INSTANCE.info("Server disconnected");
                     break;
                 }
             }
         } catch (ClassCastException | ClassNotFoundException cce) {
-            System.err.println("Error reading object as specified type: " + cce.getMessage());
-            cce.printStackTrace();
+            LoggerUtil.INSTANCE.severe("Error reading object as specified type: ", cce);
         } catch (IOException e) {
             if (isRunning) {
-                System.out.println("Connection dropped");
-                e.printStackTrace();
+                LoggerUtil.INSTANCE.info("Connection dropped", e);
             }
         } finally {
             closeServerConnection();
         }
-        System.out.println("listenToServer thread stopped");
+        LoggerUtil.INSTANCE.info("listenToServer thread stopped");
     }
 
     /**
      * Listens for keyboard input from the user
      */
-    // st278 - 06-24-2024
     private void listenToInput() {
         try (Scanner si = new Scanner(System.in)) {
             System.out.println("Waiting for input"); // moved here to avoid console spam
@@ -305,10 +345,9 @@ public enum Client {
                 }
             }
         } catch (Exception e) {
-            System.out.println("Error in listentToInput()");
-            e.printStackTrace();
+            LoggerUtil.INSTANCE.severe("Error in listentToInput()", e);
         }
-        System.out.println("listenToInput thread stopped");
+        LoggerUtil.INSTANCE.info("listenToInput thread stopped");
     }
 
     /**
@@ -317,7 +356,7 @@ public enum Client {
     private void close() {
         isRunning = false;
         closeServerConnection();
-        System.out.println("Client terminated");
+        LoggerUtil.INSTANCE.info("Client terminated");
         // System.exit(0); // Terminate the application
     }
 
@@ -329,28 +368,28 @@ public enum Client {
         knownClients.clear();
         try {
             if (out != null) {
-                System.out.println("Closing output stream");
+                LoggerUtil.INSTANCE.info("Closing output stream");
                 out.close();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerUtil.INSTANCE.info("Error closing output stream", e);
         }
         try {
             if (in != null) {
-                System.out.println("Closing input stream");
+                LoggerUtil.INSTANCE.info("Closing input stream");
                 in.close();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerUtil.INSTANCE.info("Error closing input stream", e);
         }
         try {
             if (server != null) {
-                System.out.println("Closing connection");
+                LoggerUtil.INSTANCE.info("Closing connection");
                 server.close();
-                System.out.println("Closed socket");
+                LoggerUtil.INSTANCE.info("Closed socket");
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerUtil.INSTANCE.info("Error closing socket", e);
         }
     }
 
@@ -359,8 +398,7 @@ public enum Client {
         try {
             client.start();
         } catch (IOException e) {
-            System.out.println("Exception from main()");
-            e.printStackTrace();
+            LoggerUtil.INSTANCE.info("Exception from main()", e);
         }
     }
 
@@ -371,7 +409,7 @@ public enum Client {
      */
     private void processPayload(Payload payload) {
         try {
-            System.out.println("Received Payload: " + payload);
+            LoggerUtil.INSTANCE.info("Received Payload: " + payload);
             switch (payload.getPayloadType()) {
                 case PayloadType.CLIENT_ID: // get id assigned
                     ConnectionPayload cp = (ConnectionPayload) payload;
@@ -390,6 +428,10 @@ public enum Client {
                     cp = (ConnectionPayload) payload;
                     processRoomAction(cp.getClientId(), cp.getClientName(), cp.getMessage(), cp.isConnect());
                     break;
+                case PayloadType.ROOM_LIST:
+                    RoomResultsPayload rrp = (RoomResultsPayload) payload;
+                    processRoomsList(rrp.getRooms());
+                    break;
                 case PayloadType.MESSAGE: // displays a received message
                     processMessage(payload.getClientId(), payload.getMessage());
                     break;
@@ -397,14 +439,23 @@ public enum Client {
                     break;
             }
         } catch (Exception e) {
-            System.out.println("Could not process Payload: " + payload);
-            e.printStackTrace();
+            LoggerUtil.INSTANCE.severe("Could not process Payload: " + payload,e);
         }
     }
 
     // payload processors
+    private void processRoomsList(List<String> rooms) {
+        if (rooms == null || rooms.size() == 0) {
+            System.out.println(
+                    TextFX.colorize("No rooms found matching your query",
+                            Color.RED));
+            return;
+        }
+        System.out.println(TextFX.colorize("Room Results:", Color.PURPLE));
+        System.out.println(
+                String.join("\n", rooms));
+    }
 
-    // st278 and 06-24-2024
     private void processDisconnect(long clientId, String clientName) {
         System.out.println(
                 TextFX.colorize(String.format("*%s disconnected*",
@@ -453,11 +504,51 @@ public enum Client {
                         TextFX.colorize(String.format("*%s[%s] left the Room %s*", clientName, clientId, message),
                                 Color.YELLOW));
             }
-            //clear our list
-            if(clientId == myData.getClientId()){
+            // clear our list
+            if (clientId == myData.getClientId()) {
                 knownClients.clear();
             }
         }
+
+    }
+
+    //st278 and 07/08/2024
+    private void processRollCommand(String command) {
+        LoggerUtil.INSTANCE.info("Processing roll command: " + command);
+        RollPayload rp = new RollPayload();
+        rp.setClientName(myData.getClientName());
+    
+        try {
+            if (command.contains("d")) {
+                // Format: #d#
+                String[] parts = command.split("d");
+                rp.setRollType("multiple");
+                rp.setNumDice(Integer.parseInt(parts[0]));
+                rp.setSides(Integer.parseInt(parts[1]));
+            }
+            
+    //st278 and 07/08/2024
+            else {
+                // Format: #
+                rp.setRollType("single");
+                rp.setMax(Integer.parseInt(command));
+            }
+            LoggerUtil.INSTANCE.info("Sending roll payload: " + rp);
+            send(rp);
+        } catch (NumberFormatException e) {
+            LoggerUtil.INSTANCE.severe("Invalid roll command format: " + command, e);
+            System.out.println("Invalid roll command format. Use '/roll #' or '/roll #d#'.");
+        }
+    }
+    
+    //st278 and 07/08/2024
+    private void processFlipCommand() {
+        LoggerUtil.INSTANCE.info("Processing flip command");
+        Payload p = new Payload();
+        p.setPayloadType(PayloadType.FLIP_COMMAND);
+        p.setClientName(myData.getClientName());
+        LoggerUtil.INSTANCE.info("Sending flip payload: " + p);
+        send(p);
     }
     // end payload processors
 
