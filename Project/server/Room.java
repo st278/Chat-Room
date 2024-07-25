@@ -1,19 +1,12 @@
-package Project.server;
+package Project.Server;
+
+import Project.Common.LoggerUtil;
+import Project.Common.RollPayload;
+import Project.Common.TextFX;
 import java.util.concurrent.ConcurrentHashMap;
-
-import Project.common.LoggerUtil;
-import Project.common.Payload;
-import Project.common.RollPayload;
-
-
-
+// */
 public class Room implements AutoCloseable{
     private String name;// unique name of the Room
-    private static final String BOLD_SYMBOL = "**";
-    private static final String ITALIC_SYMBOL = "_";
-    private static final String UNDERLINE_SYMBOL = "__";
-    private static final String COLOR_START_SYMBOL = "#";
-    private static final String COLOR_END_SYMBOL = "#";
     protected volatile boolean isRunning = false;
     private ConcurrentHashMap<Long, ServerThread> clientsInRoom = new ConcurrentHashMap<Long, ServerThread>();
 
@@ -69,34 +62,6 @@ public class Room implements AutoCloseable{
 
     }
 
-    //st278 and 07/08/2024
-    protected void handleRoll(ServerThread sender, RollPayload payload) {
-        LoggerUtil.INSTANCE.info("Room handling roll command: " + payload);
-        int result;
-        String message;
-    
-        if (payload.getRollType().equals("single")) {
-            result = (int) (Math.random() * payload.getMax()) + 1;
-            message = String.format("%s rolled %d and got %d", payload.getClientId(), payload.getMax(), result);
-        } else {
-            result = 0;
-            for (int i = 0; i < payload.getNumDice(); i++) {
-                result += (int) (Math.random() * payload.getSides()) + 1;
-            }
-            message = String.format("%s rolled %dd%d and got %d", payload.getClientId(), payload.getNumDice(), payload.getSides(), result);
-        }
-    
-        LoggerUtil.INSTANCE.info("Sending roll result: " + message);
-        sendMessage(sender, message);
-    }
-    
-    protected void handleFlip(ServerThread sender, Payload payload) {
-        LoggerUtil.INSTANCE.info("Room handling flip command: " + payload);
-        String result = Math.random() < 0.5 ? "heads" : "tails";
-        String message = String.format("%s flipped a coin and got %s", payload.getClientId(), result);
-        LoggerUtil.INSTANCE.info("Sending flip result: " + message);
-        sendMessage(sender, message);
-    }
     /**
      * Takes a ServerThread and removes them from the Server
      * Adding the synchronized keyword ensures that only one thread can execute
@@ -224,13 +189,23 @@ public class Room implements AutoCloseable{
      *                server-generated message
      */
     protected synchronized void sendMessage(ServerThread sender, String message) {
-        if (!isRunning) {
+        if (!isRunning) { // block action if Room isn't running
             return;
         }
+
+        // Note: any desired changes to the message must be done before this section
         String formattedMessage = processTextFormatting(message);
+
         long senderId = sender == null ? ServerThread.DEFAULT_CLIENT_ID : sender.getClientId();
+
         info(String.format("sending message to %s recipients: %s", clientsInRoom.size(), formattedMessage));
         clientsInRoom.values().removeIf(client -> {
+            
+            // st278 and 07/24/24
+            if (client.isUserMuted(sender.getClientName())) {
+                LoggerUtil.INSTANCE.info("Message from " + sender.getClientName() + " skipped for " + client.getClientName() + " due to being muted");
+                return false; 
+            }
             boolean failedToSend = !client.sendMessage(senderId, formattedMessage);
             if (failedToSend) {
                 info(String.format("Removing disconnected client[%s] from list", client.getClientId()));
@@ -238,6 +213,8 @@ public class Room implements AutoCloseable{
             }
             return failedToSend;
         });
+
+
     }
     // end send data to client(s)
 
@@ -265,52 +242,154 @@ public class Room implements AutoCloseable{
         disconnect(sender);
     }
 
-    // st278 and 07/08/2024
-    private String processTextFormatting(String message) {
-        StringBuilder processedMessage = new StringBuilder();
-        boolean isBold = false;
-        boolean isItalic = false;
-        boolean isUnderline = false;
-        String currentColor = null;
+    // end receive data from ServerThread
+
+
+
+
+
+
+
+
+    protected void handleRoll(ServerThread sender, RollPayload payload) {
+        int result;
+        String formattedMessage;
     
-        for (int i = 0; i < message.length(); i++) {
-            if (message.startsWith(BOLD_SYMBOL, i)) {
-                processedMessage.append(isBold ? "</b>" : "<b>");
-                isBold = !isBold;
-                i += BOLD_SYMBOL.length() - 1;
-            } else if (message.startsWith(ITALIC_SYMBOL, i)) {
-                processedMessage.append(isItalic ? "</i>" : "<i>");
-                isItalic = !isItalic;
-                i += ITALIC_SYMBOL.length() - 1;
-            } else if (message.startsWith(UNDERLINE_SYMBOL, i)) {
-                processedMessage.append(isUnderline ? "</u>" : "<u>");
-                isUnderline = !isUnderline;
-                i += UNDERLINE_SYMBOL.length() - 1;
-            } else if (message.startsWith(COLOR_START_SYMBOL, i)) {
-                int colorEnd = message.indexOf(COLOR_END_SYMBOL, i + 1);
-                if (colorEnd != -1) {
-                    String color = message.substring(i + 1, colorEnd);
-                    if (currentColor != null) {
-                        processedMessage.append("</").append(currentColor).append(">");
-                    }
-                    currentColor = color;
-                    processedMessage.append("<").append(color).append(">");
-                    i = colorEnd;
-                } else {
-                    processedMessage.append(message.charAt(i));
-                }
-            } else {
-                processedMessage.append(message.charAt(i));
+        if (payload.isSimpleRoll()) {
+            result = (int) (Math.random() * payload.getSides()) + 1;
+            formattedMessage = String.format("%s rolled %d and got %d", sender.getClientName(), payload.getSides(), result);
+        } else {
+            int total = 0;
+            for (int i = 0; i < payload.getQuantity(); i++) {
+                total += (int) (Math.random() * payload.getSides()) + 1;
             }
+            formattedMessage = String.format("%s rolled %dd%d and got %d", sender.getClientName(), payload.getQuantity(), payload.getSides(), total);
+        }
+        // st278 and 07/24/24
+        String message = String.format("ROLL: %s", formattedMessage);
+        sendMessage(sender, message);
+    }
+
+    protected void handleFlip(ServerThread sender) {
+        boolean isHeads = Math.random() < 0.5;
+        String result = isHeads ? "heads" : "tails";
+        String message = String.format("FLIP: %s flipped a coin and got %s", sender.getClientName(), result);
+        sendMessage(sender, message);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //st278 and 07/24/24
+    private String processTextFormatting(String message) {
+        if (message.startsWith("ROLL:") || message.startsWith("FLIP:")) {
+            // Don't apply text formatting to roll and flip results
+            return message;
         }
     
-        // Close any open tags
-        if (isBold) processedMessage.append("</b>");
-        if (isItalic) processedMessage.append("</i>");
-        if (isUnderline) processedMessage.append("</u>");
-        if (currentColor != null) processedMessage.append("</").append(currentColor).append(">");
+        // Bold: **text**
+        message = message.replaceAll("\\*\\*(.*?)\\*\\*", "<b>$1</b>");
     
-        return processedMessage.toString();
+        // Italic: *text*
+        message = message.replaceAll("\\*(.*?)\\*", "<i>$1</i>");
+    
+        // Underline: __text__
+        message = message.replaceAll("_(.*?)_", "<u>$1</u>");
+    
+        // Colors
+        message = message.replaceAll("#r(.*?)r#", "<font color='red'>$1</font>");
+        message = message.replaceAll("#g(.*?)g#", "<font color='green'>$1</font>");
+        message = message.replaceAll("#b(.*?)b#", "<font color='blue'>$1</font>");
+    
+        // Hex color: #[0-9A-Fa-f]{6}(.*?)#
+        message = message.replaceAll("#([0-9A-Fa-f]{6})(.*?)#", "<font color='#$1'>$2</font>");
+    
+        return message;
     }
-    // end receive data from ServerThread
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// st278 and 07/24/24
+public void sendPrivateMessage(ServerThread sender, long targetId, String message) {
+    ServerThread target = clientsInRoom.get(targetId);
+    if (target != null) {
+        String formattedMessage = String.format("[Private] %s: %s", sender.getClientName(), message);
+        
+        sender.sendMessage(sender.getClientId(), formattedMessage);
+        
+        if (!target.isUserMuted(sender.getClientName())) {
+            target.sendMessage(sender.getClientId(), formattedMessage);
+        } else {
+            LoggerUtil.INSTANCE.info(String.format("Private message from %s to %s was skipped due to mute", 
+                                     sender.getClientName(), target.getClientName()));
+        }
+    } else {
+        sender.sendMessage(ServerThread.DEFAULT_CLIENT_ID, "Error: User not found in this room.");
+    }
+}
+
+
+
+
+
+
+    //st278 and 07/24/24
+    protected void handleMute(ServerThread sender, long targetId) {
+        ServerThread target = clientsInRoom.get(targetId);
+        if (target != null) {
+            if (sender.addMutedUser(target.getClientName())) {
+                sender.sendMessage("You have muted " + target.getClientName());
+            } else {
+                sender.sendMessage(target.getClientName() + " is already muted");
+            }
+        } else {
+            sender.sendMessage("User not found in this room.");
+        }
+    }
+
+    protected void handleUnmute(ServerThread sender, long targetId) {
+        ServerThread target = clientsInRoom.get(targetId);
+        if (target != null) {
+            if (sender.removeMutedUser(target.getClientName())) {
+                sender.sendMessage("You have unmuted " + target.getClientName());
+            } else {
+                sender.sendMessage(target.getClientName() + " was not muted");
+            }
+        } else {
+            sender.sendMessage("User not found in this room.");
+        }
+    }
+
+
+
+
+
+
+
+
 }

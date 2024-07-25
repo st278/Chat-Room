@@ -1,11 +1,12 @@
-package Project.server;
+package Project.Server;
 
-import Project.common.LoggerUtil;
-import Project.common.Payload;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+
+import Project.Common.LoggerUtil;
+import Project.Common.Payload;
 
 /**
  * Base class the handles the underlying connection between Client and Server-side

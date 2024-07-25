@@ -1,13 +1,16 @@
-package Project.server;
-import Project.common.ConnectionPayload;
-import Project.common.LoggerUtil;
-import Project.common.Payload;
-import Project.common.PayloadType;
-import Project.common.RollPayload;
-import Project.common.RoomResultsPayload;
+package Project.Server;
+
+import Project.Common.ConnectionPayload;
+import Project.Common.LoggerUtil;
+import Project.Common.Payload;
+import Project.Common.PayloadType;
+import Project.Common.RollPayload;
+import Project.Common.RoomResultsPayload;
 import java.net.Socket;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.function.Consumer;
 
 /**
@@ -20,6 +23,8 @@ public class ServerThread extends BaseServerThread {
     private long clientId;
     private String clientName;
     private Consumer<ServerThread> onInitializationComplete; // callback to inform when this object is ready
+    private Set<String> mutedUsers = new HashSet<>();
+
 
     /**
      * Wraps the Socket connection and takes a Server reference and a callback
@@ -92,8 +97,8 @@ public class ServerThread extends BaseServerThread {
     // handle received message from the Client
     @Override
     protected void processPayload(Payload payload) {
+        LoggerUtil.INSTANCE.fine("Received Payload: " + payload);
         try {
-            LoggerUtil.INSTANCE.info("ServerThread processing payload: " + payload.getPayloadType());
             switch (payload.getPayloadType()) {
                 case CLIENT_CONNECT:
                     ConnectionPayload cp = (ConnectionPayload) payload;
@@ -115,17 +120,29 @@ public class ServerThread extends BaseServerThread {
                     currentRoom.disconnect(this);
                     break;
                 
+                // /* 
+                // Commented Out to test
+                case ROLL:
+                    RollPayload rollPayload = (RollPayload) payload;
+                    currentRoom.handleRoll(this, rollPayload);
+                    break;
+                case FLIP:
+                    currentRoom.handleFlip(this);
+                    break;
+                // */
 
-                //st278 and 07/08/2024    
-                case ROLL_COMMAND:
-                    LoggerUtil.INSTANCE.info("Received ROLL payload: " + payload);
-                    currentRoom.handleRoll(this, (RollPayload) payload);
+                //st278 and 07/24/24
+                case PRIVATE_MESSAGE:
+                    currentRoom.sendPrivateMessage(this, payload.getClientId(), payload.getMessage());
                     break;
 
-                //st278 and 07/08/2024    
-                case FLIP_COMMAND:
-                    LoggerUtil.INSTANCE.info("Received FLIP payload: " + payload);
-                    currentRoom.handleFlip(this, payload);
+
+                //st278 and 07/24/24
+                case MUTE:
+                    currentRoom.handleMute(this, payload.getClientId());
+                    break;
+                case UNMUTE:
+                    currentRoom.handleUnmute(this, payload.getClientId());
                     break;
                 default:
                     break;
@@ -230,4 +247,18 @@ public class ServerThread extends BaseServerThread {
     }
 
     // end send methods
+
+
+    //st278 and 07/24/24
+    public boolean addMutedUser(String username) {
+        return mutedUsers.add(username);
+    }
+
+    public boolean removeMutedUser(String username) {
+        return mutedUsers.remove(username);
+    }
+
+    public boolean isUserMuted(String username) {
+        return mutedUsers.contains(username);
+    }
 }
