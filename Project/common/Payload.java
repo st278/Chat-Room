@@ -1,4 +1,4 @@
-package Project.common;
+package Project.Common;
 import java.io.Serializable;
 
 public class Payload implements Serializable {
@@ -47,9 +47,5 @@ public class Payload implements Serializable {
     @Override
     public String toString(){
         return String.format("Payload[%s] Client Id [%s] Message: [%s]", getPayloadType(), getClientId(), getMessage());
-    }
-
-    public void setClientName(String clientName) {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

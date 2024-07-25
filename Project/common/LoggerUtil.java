@@ -1,4 +1,4 @@
-package Project.common;
+package Project.Common;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;

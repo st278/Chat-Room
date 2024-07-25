@@ -1,39 +1,21 @@
-package Project.common;
+package Project.Common;
 
+// /*
 public class RollPayload extends Payload {
-    private String rollType; // "single" or "multiple"
-    private int max; // For single roll
-    private int numDice; // For multiple roll
-    private int sides; // For multiple roll
-    private int result;
+    private int quantity;
+    private int sides;
+    private boolean isSimpleRoll;
 
     public RollPayload() {
-        setPayloadType(PayloadType.ROLL_COMMAND);
+        setPayloadType(PayloadType.ROLL);
     }
 
-    // Getters and setters
-    public String getRollType() {
-        return rollType;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setRollType(String rollType) {
-        this.rollType = rollType;
-    }
-
-    public int getMax() {
-        return max;
-    }
-
-    public void setMax(int max) {
-        this.max = max;
-    }
-
-    public int getNumDice() {
-        return numDice;
-    }
-
-    public void setNumDice(int numDice) {
-        this.numDice = numDice;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public int getSides() {
@@ -44,11 +26,18 @@ public class RollPayload extends Payload {
         this.sides = sides;
     }
 
-    public int getResult() {
-        return result;
+    public boolean isSimpleRoll() {
+        return isSimpleRoll;
     }
 
-    public void setResult(int result) {
-        this.result = result;
+    public void setSimpleRoll(boolean isSimpleRoll) {
+        this.isSimpleRoll = isSimpleRoll;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("RollPayload[%s] Client Id [%s] Quantity: [%d] Sides: [%d] Simple: [%b]",
+                getPayloadType(), getClientId(), quantity, sides, isSimpleRoll);
     }
 }
+// */
