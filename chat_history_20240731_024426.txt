@@ -1,0 +1,108 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *You connected*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *You joined the Room lobby*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *jenny[2] joined the Room lobby*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *matt[3] joined the Room lobby*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    shah[1]: hi
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    shah[1]: <font color="red">hello everyone</font>
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    matt[3]: <b><i><u><font color="green">HELLO</font></u></i></b>
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    jenny[2]: hey
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Room[-1]: jenny unmuted you
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    shah[1]: okay boomer
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    matt[3]: LOL
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    jenny[2]: huh
+  </body>
+</html>
+

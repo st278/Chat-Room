@@ -1,0 +1,54 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *You connected*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *You joined the Room lobby*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    shah[2]: Hey
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Bob[1]: <font color="red">Hi</font>
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    shah[2]: <b>how are you </b>
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Bob[1]: <i><u>good</u></i>
+  </body>
+</html>
+

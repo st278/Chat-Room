@@ -1569,3 +1569,886 @@
 [34m>[0m Closed socket
 07/25/2024 04:04:28 [Project.Client.Client] ([32mINFO[0m):
 [34m>[0m listenToServer thread stopped
+07/29/2024 18:26:50 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+07/29/2024 18:26:50 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+07/29/2024 18:26:54 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: shah
+07/29/2024 18:26:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+07/29/2024 18:26:54 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/29/2024 18:26:55 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/29/2024 18:26:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/29/2024 18:26:55 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+07/29/2024 18:26:55 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/29/2024 18:26:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/29/2024 18:26:55 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/29/2024 18:26:55 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: shah (1)
+07/29/2024 18:45:42 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/29/2024 18:47:17 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+07/29/2024 18:47:17 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+07/29/2024 18:47:20 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: hi
+07/29/2024 18:47:20 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+07/29/2024 18:47:20 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [hi] Status [disconnect]
+07/29/2024 18:47:20 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [hi] Status [connect]
+07/29/2024 18:47:20 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [hi] Status [connect]
+07/29/2024 18:47:20 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+07/29/2024 18:47:20 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [hi] Status [connect]
+07/29/2024 18:47:20 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [hi] Status [connect]
+07/29/2024 18:47:20 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/29/2024 18:47:20 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: hi (1)
+07/29/2024 18:47:23 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/29/2024 18:47:23 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [hey]
+07/29/2024 18:47:23 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hey]
+07/29/2024 18:47:26 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 00:02:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+07/30/2024 00:02:33 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+07/30/2024 00:02:36 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: shah
+07/30/2024 00:02:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:02:36 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 00:02:36 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[CLIENT_ID] Client Id [2] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 00:02:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [2] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 00:02:36 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+07/30/2024 00:02:36 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [shah] Status [connect]
+07/30/2024 00:02:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [shah] Status [connect]
+07/30/2024 00:02:36 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 00:02:36 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[SYNC_CLIENT] Client Id [1] Message: [null] Client Name [Bob] Status [connect]
+07/30/2024 00:02:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [1] Message: [null] Client Name [Bob] Status [connect]
+07/30/2024 00:02:36 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: shah (2)
+07/30/2024 00:02:36 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: Bob (1)
+07/30/2024 00:02:43 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [Hey]
+07/30/2024 00:02:43 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [Hey]
+07/30/2024 00:02:43 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [Hey]
+07/30/2024 00:02:52 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [<font color='red'>Hi</font>]
+07/30/2024 00:02:52 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [<font color='red'>Hi</font>]
+07/30/2024 00:02:59 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [**how are you **]
+07/30/2024 00:02:59 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [<b>how are you </b>]
+07/30/2024 00:02:59 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [<b>how are you </b>]
+07/30/2024 00:03:08 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [<i><u>good</u></i>]
+07/30/2024 00:03:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [<i><u>good</u></i>]
+07/30/2024 00:20:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Connection dropped
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1089)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2878)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3205)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3215)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1698)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:525)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:483)
+	at Project.Client.Client.listenToServer(Client.java:488)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1491)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2073)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2035)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+07/30/2024 00:20:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+07/30/2024 00:20:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+07/30/2024 00:20:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+07/30/2024 00:20:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+07/30/2024 00:20:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+07/30/2024 00:23:26 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+07/30/2024 00:23:26 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+07/30/2024 00:23:30 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: shah
+07/30/2024 00:23:30 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:23:30 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 00:23:31 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 00:23:31 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 00:23:31 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+07/30/2024 00:23:31 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/30/2024 00:23:31 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/30/2024 00:23:31 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 00:23:31 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: shah (1)
+07/30/2024 00:23:36 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [bob] Status [connect]
+07/30/2024 00:23:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [bob] Status [connect]
+07/30/2024 00:23:36 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 00:23:36 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: bob (2)
+07/30/2024 00:23:40 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [john] Status [connect]
+07/30/2024 00:23:40 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [john] Status [connect]
+07/30/2024 00:23:40 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 00:23:40 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: john (3)
+07/30/2024 00:23:48 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [4] Message: [lobby] Client Name [alice] Status [connect]
+07/30/2024 00:23:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [4] Message: [lobby] Client Name [alice] Status [connect]
+07/30/2024 00:23:48 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 00:23:48 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: alice (4)
+07/30/2024 00:23:51 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 00:23:51 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [hey]
+07/30/2024 00:23:51 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hey]
+07/30/2024 00:23:53 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [hi]
+07/30/2024 00:23:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [hi]
+07/30/2024 00:23:56 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [hello]
+07/30/2024 00:23:56 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [hello]
+07/30/2024 00:23:59 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [4] Message: [howdy]
+07/30/2024 00:23:59 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [4] Message: [howdy]
+07/30/2024 00:25:03 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 00:25:03 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [-1] Message: [You have muted bob]
+07/30/2024 00:25:03 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [You have muted bob]
+07/30/2024 00:28:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Connection dropped
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1089)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2878)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3205)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3215)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1698)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:525)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:483)
+	at Project.Client.Client.listenToServer(Client.java:488)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1491)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2073)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2035)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+07/30/2024 00:28:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+07/30/2024 00:28:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+07/30/2024 00:28:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+07/30/2024 00:28:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+07/30/2024 00:28:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+07/30/2024 00:36:01 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+07/30/2024 00:36:01 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+07/30/2024 00:36:05 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: shah
+07/30/2024 00:36:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:36:05 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 00:36:05 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 00:36:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 00:36:05 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+07/30/2024 00:36:05 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/30/2024 00:36:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/30/2024 00:36:05 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 00:36:05 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: shah (1)
+07/30/2024 00:36:16 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [moon] Status [connect]
+07/30/2024 00:36:16 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [moon] Status [connect]
+07/30/2024 00:36:16 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 00:36:16 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: moon (2)
+07/30/2024 00:36:22 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [jenny] Status [connect]
+07/30/2024 00:36:22 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [jenny] Status [connect]
+07/30/2024 00:36:22 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 00:36:22 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jenny (3)
+07/30/2024 00:36:24 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 00:36:24 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [hey]
+07/30/2024 00:36:24 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hey]
+07/30/2024 00:36:26 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [hi]
+07/30/2024 00:36:26 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [hi]
+07/30/2024 00:36:29 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [hello]
+07/30/2024 00:36:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [hello]
+07/30/2024 00:36:35 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 00:36:35 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [hi]
+07/30/2024 00:36:35 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hi]
+07/30/2024 01:13:09 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [hello]
+07/30/2024 01:13:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [hello]
+07/30/2024 01:13:13 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [hi again]
+07/30/2024 01:13:13 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [hi again]
+07/30/2024 01:13:15 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 01:13:15 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [hey]
+07/30/2024 01:13:15 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hey]
+07/30/2024 01:13:33 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 01:13:33 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [-1] Message: [You have muted moon]
+07/30/2024 01:13:33 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [You have muted moon]
+07/30/2024 01:13:45 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [I can]
+07/30/2024 01:13:45 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [I can]
+07/30/2024 01:13:53 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [you can what?]
+07/30/2024 01:13:53 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [you can what?]
+07/30/2024 01:13:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [you can what?]
+07/30/2024 01:14:09 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [uh yeah weirdo]
+07/30/2024 01:14:09 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [uh yeah weirdo]
+07/30/2024 01:22:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Connection dropped
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1089)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2878)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3205)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3215)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1698)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:525)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:483)
+	at Project.Client.Client.listenToServer(Client.java:488)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1491)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2073)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2035)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+07/30/2024 01:22:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+07/30/2024 01:22:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+07/30/2024 01:22:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+07/30/2024 01:22:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+07/30/2024 01:22:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+07/30/2024 01:35:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+07/30/2024 01:35:48 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+07/30/2024 01:35:55 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: john
+07/30/2024 01:35:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 01:35:55 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 01:35:55 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[CLIENT_ID] Client Id [2] Message: [null] Client Name [john] Status [connect]
+07/30/2024 01:35:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [2] Message: [null] Client Name [john] Status [connect]
+07/30/2024 01:35:55 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+07/30/2024 01:35:55 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [john] Status [connect]
+07/30/2024 01:35:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [john] Status [connect]
+07/30/2024 01:35:55 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 01:35:55 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[SYNC_CLIENT] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 01:35:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[SYNC_CLIENT] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 01:35:55 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: john (2)
+07/30/2024 01:35:55 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: shah (1)
+07/30/2024 01:36:00 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [jellyka] Status [connect]
+07/30/2024 01:36:00 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [jellyka] Status [connect]
+07/30/2024 01:36:00 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 01:36:00 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jellyka (3)
+07/30/2024 01:37:27 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [angel]
+07/30/2024 01:37:27 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [angel]
+07/30/2024 01:37:31 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [resides]
+07/30/2024 01:37:31 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [resides]
+07/30/2024 01:37:31 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [resides]
+07/30/2024 01:37:34 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [on earth]
+07/30/2024 01:37:34 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [on earth]
+07/30/2024 01:39:58 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [-1] Message: [shah muted you]
+07/30/2024 01:39:58 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [shah muted you]
+07/30/2024 01:40:05 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 01:40:05 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [hi]
+07/30/2024 01:40:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [hi]
+07/30/2024 02:23:40 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 02:23:40 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [1] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 02:23:40 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 02:23:40 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+07/30/2024 02:23:40 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 1
+07/30/2024 02:23:44 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:25:41 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+07/30/2024 02:25:41 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+07/30/2024 02:25:43 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: shah
+07/30/2024 02:25:43 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 02:25:43 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 02:25:44 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 02:25:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 02:25:44 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+07/30/2024 02:25:44 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/30/2024 02:25:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/30/2024 02:25:44 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 02:25:44 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: shah (1)
+07/30/2024 02:25:48 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [john] Status [connect]
+07/30/2024 02:25:48 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [john] Status [connect]
+07/30/2024 02:25:48 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 02:25:48 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: john (2)
+07/30/2024 02:25:53 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [jelly] Status [connect]
+07/30/2024 02:25:53 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [jelly] Status [connect]
+07/30/2024 02:25:53 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 02:25:53 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jelly (3)
+07/30/2024 02:25:55 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [hi]
+07/30/2024 02:25:55 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [hi]
+07/30/2024 02:26:04 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [hola]
+07/30/2024 02:26:04 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [hola]
+07/30/2024 02:26:04 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hola]
+07/30/2024 02:26:18 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [-1] Message: [john muted you]
+07/30/2024 02:26:18 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [john muted you]
+07/30/2024 02:26:22 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [nooo]
+07/30/2024 02:26:22 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [nooo]
+07/30/2024 02:26:22 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [nooo]
+07/30/2024 02:26:44 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [he cant talk]
+07/30/2024 02:26:44 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [he cant talk]
+07/30/2024 02:27:26 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [why not]
+07/30/2024 02:27:26 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [why not]
+07/30/2024 02:27:26 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [why not]
+07/30/2024 02:27:46 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [-1] Message: [john unmuted you]
+07/30/2024 02:27:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [john unmuted you]
+07/30/2024 02:30:08 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [hmm]
+07/30/2024 02:30:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [hmm]
+07/30/2024 02:30:14 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [what]
+07/30/2024 02:30:14 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [what]
+07/30/2024 02:30:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [what]
+07/30/2024 02:30:26 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [yeah?]
+07/30/2024 02:30:26 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [yeah?]
+07/30/2024 02:30:26 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [yeah?]
+07/30/2024 02:30:40 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [what]
+07/30/2024 02:30:40 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [what]
+07/30/2024 02:30:54 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[UNMUTE] Client Id [2] Message: [null]
+07/30/2024 02:30:54 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [-1] Message: [You have unmuted john]
+07/30/2024 02:30:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [You have unmuted john]
+07/30/2024 02:30:57 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [hello]
+07/30/2024 02:30:57 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [hello]
+07/30/2024 02:31:01 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [ohhh]
+07/30/2024 02:31:01 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [ohhh]
+07/30/2024 02:31:01 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [ohhh]
+07/30/2024 02:31:04 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [hi]
+07/30/2024 02:31:04 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [hi]
+07/30/2024 02:31:14 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[DISCONNECT] Client Id [3] Message: [null] Client Name [jelly] Status [disconnect]
+07/30/2024 02:31:14 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [3] Message: [null] Client Name [jelly] Status [disconnect]
+07/30/2024 02:31:14 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 02:31:14 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 3
+07/30/2024 02:31:14 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 3
+07/30/2024 02:31:16 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[DISCONNECT] Client Id [2] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 02:31:16 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [2] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 02:31:16 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 02:31:16 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 2
+07/30/2024 02:31:16 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Removing user list item for id 2
+07/30/2024 02:31:18 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 23:04:43 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+07/30/2024 23:04:43 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+07/30/2024 23:04:49 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: shah
+07/30/2024 23:04:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 23:04:49 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 23:04:49 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 23:04:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/30/2024 23:04:49 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+07/30/2024 23:04:49 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/30/2024 23:04:49 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/30/2024 23:04:49 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 23:04:49 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: shah (1)
+07/30/2024 23:04:54 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [john] Status [connect]
+07/30/2024 23:04:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [john] Status [connect]
+07/30/2024 23:04:54 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 23:04:54 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: john (2)
+07/30/2024 23:05:00 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [maya] Status [connect]
+07/30/2024 23:05:00 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [maya] Status [connect]
+07/30/2024 23:05:00 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/30/2024 23:05:00 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: maya (3)
+07/30/2024 23:05:02 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [hey]
+07/30/2024 23:05:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [hey]
+07/30/2024 23:05:04 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [hi]
+07/30/2024 23:05:04 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [hi]
+07/30/2024 23:05:08 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 23:05:08 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [hello]
+07/30/2024 23:05:08 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hello]
+07/30/2024 23:05:12 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 23:05:12 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [-1] Message: [You have muted john]
+07/30/2024 23:05:12 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [You have muted john]
+07/30/2024 23:05:20 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [hi]
+07/30/2024 23:05:20 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [hi]
+07/31/2024 01:00:01 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MUTE] Client Id [2] Message: [null]
+07/31/2024 01:00:01 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [-1] Message: [john is already muted]
+07/31/2024 01:00:01 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [john is already muted]
+07/31/2024 01:36:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Connection dropped
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1089)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2878)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3205)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3215)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1698)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:525)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:483)
+	at Project.Client.Client.listenToServer(Client.java:469)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1491)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2073)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2035)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+07/31/2024 01:36:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+07/31/2024 01:36:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+07/31/2024 01:36:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+07/31/2024 01:36:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+07/31/2024 01:36:39 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped
+07/31/2024 02:09:56 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+07/31/2024 02:09:56 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+07/31/2024 02:10:00 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: shah
+07/31/2024 02:10:00 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+07/31/2024 02:10:00 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/31/2024 02:10:00 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/31/2024 02:10:00 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/31/2024 02:10:00 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+07/31/2024 02:10:00 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/31/2024 02:10:00 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/31/2024 02:10:00 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/31/2024 02:10:00 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: shah (1)
+07/31/2024 02:10:05 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [anika] Status [connect]
+07/31/2024 02:10:05 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [anika] Status [connect]
+07/31/2024 02:10:05 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/31/2024 02:10:05 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: anika (2)
+07/31/2024 02:10:11 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/31/2024 02:10:11 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [hi]
+07/31/2024 02:10:11 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hi]
+07/31/2024 02:10:13 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [hello]
+07/31/2024 02:10:13 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [hello]
+07/31/2024 02:10:17 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [kita khobor]
+07/31/2024 02:10:17 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [kita khobor]
+07/31/2024 02:10:17 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [kita khobor]
+07/31/2024 02:10:21 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [bala asi]
+07/31/2024 02:10:21 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [bala asi]
+07/31/2024 02:11:00 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [-1] Message: [anika muted you]
+07/31/2024 02:11:00 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [anika muted you]
+07/31/2024 02:11:03 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [why]
+07/31/2024 02:11:03 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [why]
+07/31/2024 02:11:03 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [why]
+07/31/2024 02:20:26 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 02:41:43 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client Created
+07/31/2024 02:41:43 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: USER_INFO
+07/31/2024 02:41:46 [Project.Client.Views.UserDetailsPanel] ([32mINFO[0m):
+[34m>[0m Chosen username: shah
+07/31/2024 02:41:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Client connected
+07/31/2024 02:41:46 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/31/2024 02:41:46 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/31/2024 02:41:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[CLIENT_ID] Client Id [1] Message: [null] Client Name [shah] Status [connect]
+07/31/2024 02:41:46 [Project.Client.ClientUI] ([34mFINE[0m):
+[34m>[0m Current panel: CHAT
+07/31/2024 02:41:46 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/31/2024 02:41:46 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [1] Message: [lobby] Client Name [shah] Status [connect]
+07/31/2024 02:41:46 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/31/2024 02:41:46 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: shah (1)
+07/31/2024 02:42:18 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [jenny] Status [connect]
+07/31/2024 02:42:18 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [2] Message: [lobby] Client Name [jenny] Status [connect]
+07/31/2024 02:42:18 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/31/2024 02:42:18 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: jenny (2)
+07/31/2024 02:42:27 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [matt] Status [connect]
+07/31/2024 02:42:27 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[ROOM_JOIN] Client Id [3] Message: [lobby] Client Name [matt] Status [connect]
+07/31/2024 02:42:27 [Project.Client.ClientUI] ([32mINFO[0m):
+[34m>[0m Current card: CHAT
+07/31/2024 02:42:27 [Project.Client.Views.UserListPanel] ([32mINFO[0m):
+[34m>[0m Adding user to list: matt (3)
+07/31/2024 02:42:36 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/31/2024 02:42:36 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [hi]
+07/31/2024 02:42:36 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [hi]
+07/31/2024 02:42:50 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [#rhello everyoner#]
+07/31/2024 02:42:50 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [<font color='red'>hello everyone</font>]
+07/31/2024 02:42:50 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [<font color='red'>hello everyone</font>]
+07/31/2024 02:43:16 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [<b><i><u><font color='green'>HELLO</font></u></b></i>]
+07/31/2024 02:43:16 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [<b><i><u><font color='green'>HELLO</font></u></b></i>]
+07/31/2024 02:43:24 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [hey]
+07/31/2024 02:43:24 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [hey]
+07/31/2024 02:43:45 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [-1] Message: [jenny unmuted you]
+07/31/2024 02:43:45 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [-1] Message: [jenny unmuted you]
+07/31/2024 02:43:50 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[MESSAGE] Client Id [0] Message: [okay boomer]
+07/31/2024 02:43:50 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [okay boomer]
+07/31/2024 02:43:50 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [okay boomer]
+07/31/2024 02:43:54 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [LOL]
+07/31/2024 02:43:54 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [LOL]
+07/31/2024 02:44:02 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [huh]
+07/31/2024 02:44:02 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [huh]
+07/31/2024 02:45:11 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [[Private] matt: jenny be weird]
+07/31/2024 02:45:11 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [[Private] matt: jenny be weird]
+07/31/2024 02:45:23 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Sending Payload: Payload[PRIVATE_MESSAGE] Client Id [3] Message: [i know right???]
+07/31/2024 02:45:23 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [1] Message: [[Private] shah: i know right???]
+07/31/2024 02:45:23 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [1] Message: [[Private] shah: i know right???]
+07/31/2024 02:45:28 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [3] Message: [FLIP: matt flipped a coin and got heads]
+07/31/2024 02:45:28 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [3] Message: [FLIP: matt flipped a coin and got heads]
+07/31/2024 02:45:35 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [ROLL: jenny rolled 1000 and got 713]
+07/31/2024 02:45:35 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [ROLL: jenny rolled 1000 and got 713]
+07/31/2024 02:45:40 [Project.Client.Client] ([34mFINE[0m):
+[34m>[0m Received from server: Payload[MESSAGE] Client Id [2] Message: [ROLL: jenny rolled 2d9 and got 9]
+07/31/2024 02:45:40 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [2] Message: [ROLL: jenny rolled 2d9 and got 9]
+07/31/2024 02:50:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Connection dropped
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1089)
+	at java.base/java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2878)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3205)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3215)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1698)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:525)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:483)
+	at Project.Client.Client.listenToServer(Client.java:469)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1491)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:2073)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2035)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+07/31/2024 02:50:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing output stream
+07/31/2024 02:50:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing input stream
+07/31/2024 02:50:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closing connection
+07/31/2024 02:50:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m Closed socket
+07/31/2024 02:50:29 [Project.Client.Client] ([32mINFO[0m):
+[34m>[0m listenToServer thread stopped

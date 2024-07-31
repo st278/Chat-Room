@@ -5,7 +5,7 @@ import Project.Common.RollPayload;
 import Project.Common.TextFX;
 import java.util.concurrent.ConcurrentHashMap;
 // */
-public class Room implements AutoCloseable{
+public class Room implements AutoCloseable {
     private String name;// unique name of the Room
     protected volatile boolean isRunning = false;
     private ConcurrentHashMap<Long, ServerThread> clientsInRoom = new ConcurrentHashMap<Long, ServerThread>();
@@ -358,7 +358,7 @@ public void sendPrivateMessage(ServerThread sender, long targetId, String messag
 
 
 
-    //st278 and 07/24/24
+    //st278 and 07/28/24
     protected void handleMute(ServerThread sender, long targetId) {
         ServerThread target = clientsInRoom.get(targetId);
         if (target != null) {
@@ -386,10 +386,13 @@ public void sendPrivateMessage(ServerThread sender, long targetId, String messag
     }
 
 
-
-
-
-
-
+    public void sendPrivateSystemMessage(ServerThread sender, String targetUsername, String message) {
+        for (ServerThread client : clientsInRoom.values()) {
+            if (client.getClientName().equals(targetUsername)) {
+                client.sendMessage(ServerThread.DEFAULT_CLIENT_ID, message);
+                break;
+            }
+        }
+    }
 
 }

@@ -6,7 +6,11 @@ import Project.Common.Payload;
 import Project.Common.PayloadType;
 import Project.Common.RollPayload;
 import Project.Common.RoomResultsPayload;
+import java.io.File;
+import java.io.IOException;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -24,6 +28,10 @@ public class ServerThread extends BaseServerThread {
     private String clientName;
     private Consumer<ServerThread> onInitializationComplete; // callback to inform when this object is ready
     private Set<String> mutedUsers = new HashSet<>();
+    private static final String MUTE_LIST_DIRECTORY = "mute_lists";
+
+
+    
 
 
     /**
@@ -45,11 +53,14 @@ public class ServerThread extends BaseServerThread {
 
     }
 
+
+    //st278 and 07/27/24
     public void setClientName(String name) {
         if (name == null) {
             throw new NullPointerException("Client name can't be null");
         }
         this.clientName = name;
+        loadMuteList(); // Loads the mute list after setting the client name
         onInitialized();
     }
 
@@ -249,16 +260,58 @@ public class ServerThread extends BaseServerThread {
     // end send methods
 
 
-    //st278 and 07/24/24
+    //st278 and 07/28/24
     public boolean addMutedUser(String username) {
-        return mutedUsers.add(username);
+        boolean added = mutedUsers.add(username);
+        if (added) {
+            saveMuteList();
+            LoggerUtil.INSTANCE.info(clientName + " muted user: " + username);
+            notifyUserOfMuteStatus(username, true);
+        }
+        return added;
     }
-
+    
     public boolean removeMutedUser(String username) {
-        return mutedUsers.remove(username);
+        boolean removed = mutedUsers.remove(username);
+        if (removed) {
+            saveMuteList();
+            LoggerUtil.INSTANCE.info(clientName + " unmuted user: " + username);
+            notifyUserOfMuteStatus(username, false);
+        }
+        return removed;
+    }
+    
+    private void notifyUserOfMuteStatus(String targetUsername, boolean isMuted) {
+        String message = String.format("%s %s you", clientName, isMuted ? "muted" : "unmuted");
+        currentRoom.sendPrivateSystemMessage(this, targetUsername, message);
     }
 
     public boolean isUserMuted(String username) {
         return mutedUsers.contains(username);
+    }
+    
+    
+    //st278 and 07/28/24
+    private void saveMuteList() {
+        String fileName = MUTE_LIST_DIRECTORY + File.separator + clientName + ".txt";
+        try {
+            Files.write(Paths.get(fileName), mutedUsers);
+            LoggerUtil.INSTANCE.info("Saved mute list for " + clientName);
+        } catch (IOException e) {
+            LoggerUtil.INSTANCE.severe("Error saving mute list for " + clientName, e);
+        }
+    }
+
+    //st278 and 07/27/24
+    private void loadMuteList() {
+    String fileName = MUTE_LIST_DIRECTORY + File.separator + clientName + ".txt";
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(fileName));
+            mutedUsers.clear(); // Clear existing mute list before loading
+            mutedUsers.addAll(lines);
+            LoggerUtil.INSTANCE.info("Loaded mute list for " + clientName);
+        } catch (IOException e) {
+            LoggerUtil.INSTANCE.info("No existing mute list found for " + clientName + ". Starting with an empty list.");
+        }
     }
 }

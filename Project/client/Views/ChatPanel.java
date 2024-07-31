@@ -17,12 +17,16 @@ import java.awt.event.ContainerEvent;
 import java.awt.event.ContainerListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JEditorPane;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
@@ -31,6 +35,8 @@ import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
+
+
 
 /**
  * ChatPanel represents the main chat interface where messages can be sent and
@@ -42,6 +48,9 @@ public class ChatPanel extends JPanel {
     private UserListPanel userListPanel;
     private final float CHAT_SPLIT_PERCENT = 0.7f;
 
+
+    private JButton exportButton;
+
     /**
      * Constructor to create the ChatPanel UI.
      * 
@@ -52,6 +61,21 @@ public class ChatPanel extends JPanel {
 
         JPanel chatContent = new JPanel(new GridBagLayout());
         chatContent.setAlignmentY(Component.TOP_ALIGNMENT);
+
+        JPanel input = new JPanel();
+        input.setLayout(new BoxLayout(input, BoxLayout.X_AXIS));
+        input.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+
+        JTextField textValue = new JTextField();
+        input.add(textValue);
+
+        JButton button = new JButton("Send");
+        
+        exportButton = new JButton("Export Chat");
+        exportButton.addActionListener(e -> exportChatHistory());
+        input.add(exportButton);
+
 
         // Wraps a viewport to provide scroll capabilities
         JScrollPane scroll = new JScrollPane(chatContent);
@@ -88,14 +112,11 @@ public class ChatPanel extends JPanel {
             }
         });
 
-        JPanel input = new JPanel();
-        input.setLayout(new BoxLayout(input, BoxLayout.X_AXIS));
-        input.setBorder(new EmptyBorder(5, 5, 5, 5)); // Add padding
 
-        JTextField textValue = new JTextField();
-        input.add(textValue);
+        //st278 and 07/27/24
 
-        JButton button = new JButton("Send");
+
+
         // Allows submission with the enter key instead of just the button click
         textValue.addKeyListener(new KeyListener() {
             @Override
@@ -129,6 +150,7 @@ public class ChatPanel extends JPanel {
         });
 
         input.add(button);
+        
 
         this.add(splitPane, BorderLayout.CENTER);
         this.add(input, BorderLayout.SOUTH);
@@ -199,6 +221,12 @@ public class ChatPanel extends JPanel {
      * @param text The text of the message.
      */
 
+
+
+
+
+     
+
      //st278 and 07/24/24
     public void addText(String text) {
         SwingUtilities.invokeLater(() -> {
@@ -242,4 +270,30 @@ public class ChatPanel extends JPanel {
             });
         });
     }
+
+
+
+    //st278 and 07/27/24
+    private void exportChatHistory() {
+        StringBuilder chatHistory = new StringBuilder();
+        
+        for (Component component : chatArea.getComponents()) {
+            if (component instanceof JEditorPane) {
+                JEditorPane textContainer = (JEditorPane) component;
+                chatHistory.append(textContainer.getText()).append("\n");
+            }
+        }
+
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+        String fileName = "chat_history_" + now.format(formatter) + ".txt";
+
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write(chatHistory.toString());
+            JOptionPane.showMessageDialog(this, "Chat history exported to " + fileName, "Export Successful", JOptionPane.INFORMATION_MESSAGE);
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this, "Error exporting chat history: " + ex.getMessage(), "Export Failed", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
 }

@@ -1,5 +1,6 @@
 package Project.Client.Views;
 
+import Project.Common.LoggerUtil;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -10,15 +11,12 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.ContainerEvent;
 import java.awt.event.ContainerListener;
 import java.util.HashMap;
-
 import javax.swing.Box;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
-
-import Project.Common.LoggerUtil;
 
 /**
  * UserListPanel represents a UI component that displays a list of users.

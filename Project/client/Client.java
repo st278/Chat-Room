@@ -73,25 +73,6 @@ public enum Client {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
     public boolean isConnected() {
         if (server == null) {
             return false;
@@ -616,9 +597,13 @@ public enum Client {
                     RoomResultsPayload rrp = (RoomResultsPayload) payload;
                     processRoomsList(rrp.getRooms(), rrp.getMessage());
                     break;
+
+
+                //st278 and 07/29/24
                 case PayloadType.MESSAGE: // displays a received message
                     processMessage(payload.getClientId(), payload.getMessage());
                     break;
+
                 default:
                     break;
             }
