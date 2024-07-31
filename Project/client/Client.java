@@ -603,6 +603,11 @@ public enum Client {
                 case PayloadType.MESSAGE: // displays a received message
                     processMessage(payload.getClientId(), payload.getMessage());
                     break;
+                case MUTE:
+                case UNMUTE:
+                    boolean isMuted = payload.getPayloadType() == PayloadType.MUTE;
+                    ((ClientUI) events).onMuteStatusChange(payload.getClientId(), isMuted);
+                    break;
 
                 default:
                     break;

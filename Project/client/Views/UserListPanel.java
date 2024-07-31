@@ -26,6 +26,9 @@ public class UserListPanel extends JPanel {
     private GridBagConstraints lastConstraints; // Keep track of the last constraints for the glue
     private HashMap<Long, UserListItem> userItemsMap; // Maintain a map of client IDs to UserListItems
 
+    private long lastSenderId = -1;
+
+
     /**
      * Constructor to create the UserListPanel UI.
      */
@@ -170,6 +173,31 @@ public class UserListPanel extends JPanel {
             userListArea.removeAll();
             userListArea.revalidate();
             userListArea.repaint();
+        });
+    }
+    
+    public void updateUserMuteStatus(long clientId, boolean isMuted) {
+        SwingUtilities.invokeLater(() -> {
+            UserListItem item = userItemsMap.get(clientId);
+            if (item != null) {
+                item.setMuted(isMuted);
+            }
+        });
+    }
+
+    public void updateLastSender(long clientId) {
+        SwingUtilities.invokeLater(() -> {
+            if (lastSenderId != -1) {
+                UserListItem lastItem = userItemsMap.get(lastSenderId);
+                if (lastItem != null) {
+                    lastItem.setLastSender(false);
+                }
+            }
+            UserListItem newLastItem = userItemsMap.get(clientId);
+            if (newLastItem != null) {
+                newLastItem.setLastSender(true);
+            }
+            lastSenderId = clientId;
         });
     }
 }

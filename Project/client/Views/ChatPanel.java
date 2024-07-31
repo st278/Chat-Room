@@ -296,4 +296,14 @@ public class ChatPanel extends JPanel {
         }
     }
 
+
+
+    public void updateUserMuteStatus(long clientId, boolean isMuted) {
+        userListPanel.updateUserMuteStatus(clientId, isMuted);
+    }
+
+    public void updateLastSender(long clientId) {
+        userListPanel.updateLastSender(clientId);
+    }
+
 }

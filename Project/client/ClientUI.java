@@ -10,6 +10,7 @@ import Project.Client.Views.Menu;
 import Project.Client.Views.RoomsPanel;
 import Project.Client.Views.UserDetailsPanel;
 import Project.Common.LoggerUtil;
+import Project.Server.ServerThread;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -190,22 +191,36 @@ public class ClientUI extends JFrame implements IConnectionEvents, IMessageEvent
     }
 
     @Override
-public void onMessageReceive(long clientId, String message) {
-    if (currentCard.ordinal() >= CardView.CHAT.ordinal()) {
-        String clientName = Client.INSTANCE.getClientNameFromId(clientId);
-        String displayMessage;
-        
-        if (message.startsWith("[Private]")) {
-            // For private messages, use italic formatting and don't show the client ID
-            displayMessage = String.format("<i>%s</i>", message);
-        } else {
-            // For regular messages, keep the existing format
-            displayMessage = String.format("%s[%s]: %s", clientName, clientId, message);
+    public void onMessageReceive(long clientId, String message) {
+        if (currentCard.ordinal() >= CardView.CHAT.ordinal()) {
+            String clientName = Client.INSTANCE.getClientNameFromId(clientId);
+            String displayMessage;
+            
+            if (message.startsWith("[Private]")) {
+                // For private messages, use italic formatting and don't show the client ID
+                displayMessage = String.format("<i>%s</i>", message);
+            } else {
+                // For regular messages, keep the existing format
+                displayMessage = String.format("%s[%s]: %s", clientName, clientId, message);
+                
+                // Update the last sender in the user list
+                chatPanel.updateLastSender(clientId);
+            }
+            
+            chatPanel.addText(displayMessage);
+            
+            // If the message is from the server (clientId == -1), don't update the last sender
+            if (clientId != ServerThread.DEFAULT_CLIENT_ID) {
+                chatPanel.updateLastSender(clientId);
+            }
         }
-        
-        chatPanel.addText(displayMessage);
     }
-}
+    public void onMuteStatusChange(long clientId, boolean isMuted) {
+        if (currentCard.ordinal() >= CardView.CHAT.ordinal()) {
+            chatPanel.updateUserMuteStatus(clientId, isMuted);
+        }
+    }
+
 
     @Override
     public void onReceiveClientId(long id) {
