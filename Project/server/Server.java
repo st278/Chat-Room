@@ -1,14 +1,14 @@
 package Project.Server;
 
+import Project.Common.LoggerUtil;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
-
-import Project.Common.LoggerUtil;
-
 public enum Server {
     INSTANCE;
 
@@ -26,6 +26,9 @@ public enum Server {
     private final ConcurrentHashMap<String, Room> rooms = new ConcurrentHashMap<>();
     private boolean isRunning = true;
     private long nextClientId = 1;
+
+    private static final String MUTE_LIST_DIRECTORY = "mute_lists";
+
 
     private Server() {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
@@ -158,5 +161,14 @@ public enum Server {
         }
         server.start(port);
         LoggerUtil.INSTANCE.info("Server Stopped");
+    }
+    static {
+        // This block will run when the Server class is first loaded
+        try {
+            Files.createDirectories(Paths.get(MUTE_LIST_DIRECTORY));
+            LoggerUtil.INSTANCE.info("Mute lists directory created or already exists: " + MUTE_LIST_DIRECTORY);
+        } catch (IOException e) {
+            LoggerUtil.INSTANCE.severe("Error creating mute_lists directory", e);
+        }
     }
 }

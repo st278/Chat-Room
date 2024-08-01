@@ -1,0 +1,81 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *You connected*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *You joined the Room lobby*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *john[2] joined the Room lobby*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *maya[3] joined the Room lobby*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    maya[3]: hey
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    john[2]: hi
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    shah[1]: hello
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Room[-1]: You have muted john
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    maya[3]: hi
+  </body>
+</html>
+

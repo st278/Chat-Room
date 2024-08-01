@@ -1,0 +1,117 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *You connected*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *You joined the Room lobby*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    *matt[3] joined the Room lobby*
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    matt[3]: <b><i><u><font color="green">HELLO</font></u></i></b>
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    jenny[2]: hey
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Room[-1]: shah is already muted
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Room[-1]: You have unmuted shah
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    shah[1]: okay boomer
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    matt[3]: LOL
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    jenny[2]: huh
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    matt[3]: <font color="purple">matt flipped a coin and got heads</font>
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    jenny[2]: <font color="purple">jenny rolled 1000 and got 713</font>
+  </body>
+</html>
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    jenny[2]: <font color="purple">jenny rolled 2d9 and got 9</font>
+  </body>
+</html>
+

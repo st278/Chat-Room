@@ -2777,3 +2777,1647 @@
 [34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [#gnot funny guysg#]
 07/25/2024 03:40:38 [Project.Server.Room] ([32mINFO[0m):
 [34m>[0m Room[lobby]: sending message to 3 recipients: <font color='green'>not funny guys</font>
+07/29/2024 18:26:37 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/29/2024 18:26:38 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/29/2024 18:26:38 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/29/2024 18:26:38 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/29/2024 18:26:38 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/29/2024 18:26:54 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/29/2024 18:26:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/29/2024 18:26:54 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/29/2024 18:26:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/29/2024 18:26:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/29/2024 18:26:54 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/29/2024 18:26:55 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *shah[1] initialized*
+07/29/2024 18:26:55 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/29/2024 18:26:55 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] joined the Room[lobby]
+07/29/2024 18:45:42 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/29/2024 18:45:42 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/29/2024 18:45:42 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 1 recipients
+07/29/2024 18:45:42 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Thread being disconnected by server
+07/29/2024 18:45:42 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() start
+07/29/2024 18:45:42 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() end
+07/29/2024 18:45:42 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 0
+07/29/2024 18:45:42 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] disconnected
+07/29/2024 18:45:42 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Exited thread loop. Cleaning up connection
+07/29/2024 18:45:42 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() start
+07/29/2024 18:45:42 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() end
+07/29/2024 18:47:06 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/29/2024 18:47:06 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/29/2024 18:47:06 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/29/2024 18:47:06 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/29/2024 18:47:06 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/29/2024 18:47:20 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/29/2024 18:47:20 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/29/2024 18:47:20 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/29/2024 18:47:20 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/29/2024 18:47:20 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [hi] Status [disconnect]
+07/29/2024 18:47:20 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [hi] Status [disconnect]
+07/29/2024 18:47:20 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *hi[1] initialized*
+07/29/2024 18:47:20 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/29/2024 18:47:20 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: hi[1] joined the Room[lobby]
+07/29/2024 18:47:23 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[hi(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/29/2024 18:47:23 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/29/2024 18:47:23 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 1 recipients: hey
+07/29/2024 18:47:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[hi(1)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/29/2024 18:47:26 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/29/2024 18:47:26 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 1 recipients
+07/29/2024 18:47:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[hi(1)]: Thread being disconnected by server
+07/29/2024 18:47:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[hi(1)]: ServerThread cleanup() start
+07/29/2024 18:47:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[hi(1)]: ServerThread cleanup() end
+07/29/2024 18:47:26 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 0
+07/29/2024 18:47:26 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: hi[1] disconnected
+07/29/2024 18:47:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[hi(1)]: Exited thread loop. Cleaning up connection
+07/29/2024 18:47:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[hi(1)]: ServerThread cleanup() start
+07/29/2024 18:47:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[hi(1)]: ServerThread cleanup() end
+07/30/2024 00:02:06 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/30/2024 00:02:06 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/30/2024 00:02:06 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/30/2024 00:02:06 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/30/2024 00:02:06 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:02:20 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:02:20 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 00:02:20 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:02:20 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 00:02:20 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [Bob] Status [disconnect]
+07/30/2024 00:02:20 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [Bob] Status [disconnect]
+07/30/2024 00:02:20 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *Bob[1] initialized*
+07/30/2024 00:02:20 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/30/2024 00:02:20 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: Bob[1] joined the Room[lobby]
+07/30/2024 00:02:36 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:02:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 00:02:36 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:02:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 00:02:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 00:02:36 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 00:02:36 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *shah[2] initialized*
+07/30/2024 00:02:36 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 2 recipients
+07/30/2024 00:02:36 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[2] joined the Room[lobby]
+07/30/2024 00:02:43 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [Hey]
+07/30/2024 00:02:43 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [Hey]
+07/30/2024 00:02:43 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 2 recipients: Hey
+07/30/2024 00:02:52 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[Bob(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [#rHir#]
+07/30/2024 00:02:52 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [#rHir#]
+07/30/2024 00:02:52 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 2 recipients: <font color='red'>Hi</font>
+07/30/2024 00:02:59 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [**how are you **]
+07/30/2024 00:02:59 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [**how are you **]
+07/30/2024 00:02:59 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 2 recipients: <b>how are you </b>
+07/30/2024 00:03:08 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[Bob(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [*_good_*]
+07/30/2024 00:03:08 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [*_good_*]
+07/30/2024 00:03:08 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 2 recipients: <i><u>good</u></i>
+07/30/2024 00:21:10 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/30/2024 00:21:11 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/30/2024 00:21:11 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/30/2024 00:21:11 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/30/2024 00:21:11 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:23:30 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:23:30 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 00:23:30 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:23:30 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 00:23:31 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 00:23:31 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 00:23:31 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for shah. Starting with an empty list.
+07/30/2024 00:23:31 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *shah[1] initialized*
+07/30/2024 00:23:31 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/30/2024 00:23:31 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] joined the Room[lobby]
+07/30/2024 00:23:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:23:35 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 00:23:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:23:35 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 00:23:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [bob] Status [disconnect]
+07/30/2024 00:23:36 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [bob] Status [disconnect]
+07/30/2024 00:23:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for bob. Starting with an empty list.
+07/30/2024 00:23:36 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *bob[2] initialized*
+07/30/2024 00:23:36 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 2 recipients
+07/30/2024 00:23:36 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: bob[2] joined the Room[lobby]
+07/30/2024 00:23:40 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 00:23:40 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 00:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 00:23:40 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 00:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for john. Starting with an empty list.
+07/30/2024 00:23:40 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *john[3] initialized*
+07/30/2024 00:23:40 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 3 recipients
+07/30/2024 00:23:40 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: john[3] joined the Room[lobby]
+07/30/2024 00:23:48 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:23:48 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 00:23:48 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:23:48 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 00:23:48 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [alice] Status [disconnect]
+07/30/2024 00:23:48 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [alice] Status [disconnect]
+07/30/2024 00:23:48 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for alice. Starting with an empty list.
+07/30/2024 00:23:48 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *alice[4] initialized*
+07/30/2024 00:23:48 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 4 recipients
+07/30/2024 00:23:48 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: alice[4] joined the Room[lobby]
+07/30/2024 00:23:51 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 00:23:51 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 00:23:51 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 4 recipients: hey
+07/30/2024 00:23:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[bob(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 00:23:53 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 00:23:53 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 4 recipients: hi
+07/30/2024 00:23:56 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 00:23:56 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 00:23:56 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 4 recipients: hello
+07/30/2024 00:23:59 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[alice(4)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [howdy]
+07/30/2024 00:23:59 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [howdy]
+07/30/2024 00:23:59 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 4 recipients: howdy
+07/30/2024 00:25:03 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 00:25:03 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 00:25:03 [Project.Server.ServerThread] ([31mSEVERE[0m):
+[34m>[0m Error saving mute list for shah
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:482)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:227)
+	at java.base/java.nio.file.Files.write(Files.java:3566)
+	at java.base/java.nio.file.Files.write(Files.java:3618)
+	at Project.Server.ServerThread.saveMuteList(ServerThread.java:286)
+	at Project.Server.ServerThread.addMutedUser(ServerThread.java:264)
+	at Project.Server.Room.handleMute(Room.java:365)
+	at Project.Server.ServerThread.processPayload(ServerThread.java:150)
+	at Project.Server.BaseServerThread.run(BaseServerThread.java:91)
+
+07/30/2024 00:25:03 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m shah muted user: bob
+07/30/2024 00:25:07 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[bob(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 00:25:07 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 00:25:07 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 4 recipients: hey
+07/30/2024 00:25:07 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from bob skipped for shah due to being muted
+07/30/2024 00:33:09 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Mute lists directory created or already exists: mute_lists
+07/30/2024 00:33:09 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/30/2024 00:33:09 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/30/2024 00:33:09 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/30/2024 00:33:09 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/30/2024 00:33:09 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:36:05 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:36:05 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 00:36:05 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:36:05 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 00:36:05 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 00:36:05 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 00:36:05 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for shah. Starting with an empty list.
+07/30/2024 00:36:05 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *shah[1] initialized*
+07/30/2024 00:36:05 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/30/2024 00:36:05 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] joined the Room[lobby]
+07/30/2024 00:36:16 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:36:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 00:36:16 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:36:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 00:36:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [moon] Status [disconnect]
+07/30/2024 00:36:16 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [moon] Status [disconnect]
+07/30/2024 00:36:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for moon. Starting with an empty list.
+07/30/2024 00:36:16 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *moon[2] initialized*
+07/30/2024 00:36:16 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 2 recipients
+07/30/2024 00:36:16 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: moon[2] joined the Room[lobby]
+07/30/2024 00:36:22 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 00:36:22 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 00:36:22 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 00:36:22 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 00:36:22 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jenny] Status [disconnect]
+07/30/2024 00:36:22 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jenny] Status [disconnect]
+07/30/2024 00:36:22 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for jenny. Starting with an empty list.
+07/30/2024 00:36:22 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *jenny[3] initialized*
+07/30/2024 00:36:22 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 3 recipients
+07/30/2024 00:36:22 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jenny[3] joined the Room[lobby]
+07/30/2024 00:36:24 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 00:36:24 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 00:36:24 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hey
+07/30/2024 00:36:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[moon(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 00:36:26 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 00:36:26 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/30/2024 00:36:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 00:36:29 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 00:36:29 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hello
+07/30/2024 00:36:33 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(3)]: Received from my client: Payload[MUTE] Client Id [1] Message: [null]
+07/30/2024 00:36:33 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [1] Message: [null]
+07/30/2024 00:36:33 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for jenny
+07/30/2024 00:36:33 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m jenny muted user: shah
+07/30/2024 00:36:35 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 00:36:35 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 00:36:35 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/30/2024 00:36:35 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from shah skipped for jenny due to being muted
+07/30/2024 01:13:09 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 01:13:09 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 01:13:09 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hello
+07/30/2024 01:13:13 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[moon(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi again]
+07/30/2024 01:13:13 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi again]
+07/30/2024 01:13:13 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi again
+07/30/2024 01:13:15 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 01:13:15 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 01:13:15 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hey
+07/30/2024 01:13:15 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from shah skipped for jenny due to being muted
+07/30/2024 01:13:33 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 01:13:33 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 01:13:33 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for shah
+07/30/2024 01:13:33 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m shah muted user: moon
+07/30/2024 01:13:42 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[moon(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [can you hear me]
+07/30/2024 01:13:42 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [can you hear me]
+07/30/2024 01:13:42 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: can you hear me
+07/30/2024 01:13:42 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from moon skipped for shah due to being muted
+07/30/2024 01:13:45 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [I can]
+07/30/2024 01:13:45 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [I can]
+07/30/2024 01:13:45 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: I can
+07/30/2024 01:13:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [you can what?]
+07/30/2024 01:13:53 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [you can what?]
+07/30/2024 01:13:53 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: you can what?
+07/30/2024 01:13:53 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from shah skipped for jenny due to being muted
+07/30/2024 01:14:01 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[moon(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [she can hear me]
+07/30/2024 01:14:01 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [she can hear me]
+07/30/2024 01:14:01 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: she can hear me
+07/30/2024 01:14:01 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from moon skipped for shah due to being muted
+07/30/2024 01:14:09 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [uh yeah weirdo]
+07/30/2024 01:14:09 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [uh yeah weirdo]
+07/30/2024 01:14:09 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: uh yeah weirdo
+07/30/2024 01:33:28 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Mute lists directory created or already exists: mute_lists
+07/30/2024 01:33:28 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/30/2024 01:33:28 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/30/2024 01:33:28 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/30/2024 01:33:28 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/30/2024 01:33:28 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 01:35:47 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 01:35:47 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 01:35:47 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 01:35:47 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 01:35:47 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 01:35:47 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 01:35:47 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for shah. Starting with an empty list.
+07/30/2024 01:35:47 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *shah[1] initialized*
+07/30/2024 01:35:47 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/30/2024 01:35:47 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] joined the Room[lobby]
+07/30/2024 01:35:55 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 01:35:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 01:35:55 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 01:35:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 01:35:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 01:35:55 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 01:35:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for john. Starting with an empty list.
+07/30/2024 01:35:55 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *john[2] initialized*
+07/30/2024 01:35:55 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 2 recipients
+07/30/2024 01:35:55 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: john[2] joined the Room[lobby]
+07/30/2024 01:36:00 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 01:36:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 01:36:00 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 01:36:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 01:36:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jellyka] Status [disconnect]
+07/30/2024 01:36:00 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jellyka] Status [disconnect]
+07/30/2024 01:36:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for jellyka. Starting with an empty list.
+07/30/2024 01:36:00 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *jellyka[3] initialized*
+07/30/2024 01:36:00 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 3 recipients
+07/30/2024 01:36:00 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jellyka[3] joined the Room[lobby]
+07/30/2024 01:37:27 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [angel]
+07/30/2024 01:37:27 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [angel]
+07/30/2024 01:37:27 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: angel
+07/30/2024 01:37:31 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [resides]
+07/30/2024 01:37:31 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [resides]
+07/30/2024 01:37:31 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: resides
+07/30/2024 01:37:34 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jellyka(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [on earth]
+07/30/2024 01:37:34 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [on earth]
+07/30/2024 01:37:34 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: on earth
+07/30/2024 01:39:58 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 01:39:58 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 01:39:58 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for shah
+07/30/2024 01:39:58 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m shah muted user: john
+07/30/2024 01:40:05 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 01:40:05 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 01:40:05 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/30/2024 01:40:05 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for shah due to being muted
+07/30/2024 02:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:23:40 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:23:40 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 3 recipients
+07/30/2024 02:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Thread being disconnected by server
+07/30/2024 02:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() start
+07/30/2024 02:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() end
+07/30/2024 02:23:40 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 2
+07/30/2024 02:23:40 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] disconnected
+07/30/2024 02:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Exited thread loop. Cleaning up connection
+07/30/2024 02:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() start
+07/30/2024 02:23:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() end
+07/30/2024 02:23:44 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:23:44 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:23:44 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 2 recipients
+07/30/2024 02:23:44 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Thread being disconnected by server
+07/30/2024 02:23:44 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: ServerThread cleanup() start
+07/30/2024 02:23:44 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: ServerThread cleanup() end
+07/30/2024 02:23:44 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 1
+07/30/2024 02:23:44 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: john[2] disconnected
+07/30/2024 02:23:44 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Exited thread loop. Cleaning up connection
+07/30/2024 02:23:44 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: ServerThread cleanup() start
+07/30/2024 02:23:44 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: ServerThread cleanup() end
+07/30/2024 02:23:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jellyka(3)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:23:46 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:23:46 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 1 recipients
+07/30/2024 02:23:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jellyka(3)]: Thread being disconnected by server
+07/30/2024 02:23:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jellyka(3)]: ServerThread cleanup() start
+07/30/2024 02:23:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jellyka(3)]: ServerThread cleanup() end
+07/30/2024 02:23:46 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 0
+07/30/2024 02:23:46 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jellyka[3] disconnected
+07/30/2024 02:23:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jellyka(3)]: Exited thread loop. Cleaning up connection
+07/30/2024 02:23:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jellyka(3)]: ServerThread cleanup() start
+07/30/2024 02:23:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jellyka(3)]: ServerThread cleanup() end
+07/30/2024 02:25:02 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Mute lists directory created or already exists: mute_lists
+07/30/2024 02:25:02 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/30/2024 02:25:02 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/30/2024 02:25:02 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/30/2024 02:25:02 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/30/2024 02:25:02 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 02:25:43 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 02:25:43 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 02:25:43 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 02:25:43 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 02:25:44 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 02:25:44 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 02:25:44 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Loaded mute list for shah
+07/30/2024 02:25:44 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *shah[1] initialized*
+07/30/2024 02:25:44 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/30/2024 02:25:44 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] joined the Room[lobby]
+07/30/2024 02:25:48 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 02:25:48 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 02:25:48 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 02:25:48 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 02:25:48 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 02:25:48 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 02:25:48 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for john. Starting with an empty list.
+07/30/2024 02:25:48 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *john[2] initialized*
+07/30/2024 02:25:48 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 2 recipients
+07/30/2024 02:25:48 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: john[2] joined the Room[lobby]
+07/30/2024 02:25:53 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 02:25:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 02:25:53 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 02:25:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 02:25:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jelly] Status [disconnect]
+07/30/2024 02:25:53 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jelly] Status [disconnect]
+07/30/2024 02:25:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for jelly. Starting with an empty list.
+07/30/2024 02:25:53 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *jelly[3] initialized*
+07/30/2024 02:25:53 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 3 recipients
+07/30/2024 02:25:53 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jelly[3] joined the Room[lobby]
+07/30/2024 02:25:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 02:25:55 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 02:25:55 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/30/2024 02:25:59 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 02:25:59 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 02:25:59 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hey
+07/30/2024 02:25:59 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for shah due to being muted
+07/30/2024 02:26:04 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hola]
+07/30/2024 02:26:04 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hola]
+07/30/2024 02:26:04 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hola
+07/30/2024 02:26:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MUTE] Client Id [1] Message: [null]
+07/30/2024 02:26:18 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [1] Message: [null]
+07/30/2024 02:26:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for john
+07/30/2024 02:26:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m john muted user: shah
+07/30/2024 02:26:22 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [nooo]
+07/30/2024 02:26:22 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [nooo]
+07/30/2024 02:26:22 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: nooo
+07/30/2024 02:26:22 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from shah skipped for john due to being muted
+07/30/2024 02:26:37 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [lol]
+07/30/2024 02:26:37 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [lol]
+07/30/2024 02:26:37 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: lol
+07/30/2024 02:26:37 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for shah due to being muted
+07/30/2024 02:26:44 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [he cant talk]
+07/30/2024 02:26:44 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [he cant talk]
+07/30/2024 02:26:44 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: he cant talk
+07/30/2024 02:27:22 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [he's not grayed out]
+07/30/2024 02:27:22 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [he's not grayed out]
+07/30/2024 02:27:22 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: he's not grayed out
+07/30/2024 02:27:22 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for shah due to being muted
+07/30/2024 02:27:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [why not]
+07/30/2024 02:27:26 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [why not]
+07/30/2024 02:27:26 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: why not
+07/30/2024 02:27:26 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from shah skipped for john due to being muted
+07/30/2024 02:27:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[UNMUTE] Client Id [1] Message: [null]
+07/30/2024 02:27:46 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[UNMUTE] Client Id [1] Message: [null]
+07/30/2024 02:27:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for john
+07/30/2024 02:27:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m john unmuted user: shah
+07/30/2024 02:29:57 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: Received from my client: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 02:29:57 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 02:29:57 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for jelly
+07/30/2024 02:29:57 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m jelly muted user: john
+07/30/2024 02:30:08 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hmm]
+07/30/2024 02:30:08 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hmm]
+07/30/2024 02:30:08 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hmm
+07/30/2024 02:30:14 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [what]
+07/30/2024 02:30:14 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [what]
+07/30/2024 02:30:14 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: what
+07/30/2024 02:30:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [yea]
+07/30/2024 02:30:18 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [yea]
+07/30/2024 02:30:18 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: yea
+07/30/2024 02:30:18 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for shah due to being muted
+07/30/2024 02:30:18 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for jelly due to being muted
+07/30/2024 02:30:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [yeah?]
+07/30/2024 02:30:26 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [yeah?]
+07/30/2024 02:30:26 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: yeah?
+07/30/2024 02:30:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [yeah]
+07/30/2024 02:30:29 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [yeah]
+07/30/2024 02:30:29 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: yeah
+07/30/2024 02:30:29 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for shah due to being muted
+07/30/2024 02:30:29 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for jelly due to being muted
+07/30/2024 02:30:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [what]
+07/30/2024 02:30:40 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [what]
+07/30/2024 02:30:40 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: what
+07/30/2024 02:30:43 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [why]
+07/30/2024 02:30:43 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [why]
+07/30/2024 02:30:43 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: why
+07/30/2024 02:30:43 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for shah due to being muted
+07/30/2024 02:30:43 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for jelly due to being muted
+07/30/2024 02:30:47 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [why]
+07/30/2024 02:30:47 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [why]
+07/30/2024 02:30:47 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: why
+07/30/2024 02:30:47 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for shah due to being muted
+07/30/2024 02:30:47 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for jelly due to being muted
+07/30/2024 02:30:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[UNMUTE] Client Id [2] Message: [null]
+07/30/2024 02:30:54 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[UNMUTE] Client Id [2] Message: [null]
+07/30/2024 02:30:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for shah
+07/30/2024 02:30:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m shah unmuted user: john
+07/30/2024 02:30:57 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 02:30:57 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 02:30:57 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hello
+07/30/2024 02:30:57 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for jelly due to being muted
+07/30/2024 02:31:01 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [ohhh]
+07/30/2024 02:31:01 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [ohhh]
+07/30/2024 02:31:01 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: ohhh
+07/30/2024 02:31:04 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 02:31:04 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 02:31:04 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/30/2024 02:31:14 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:31:14 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:31:14 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 3 recipients
+07/30/2024 02:31:14 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: Thread being disconnected by server
+07/30/2024 02:31:14 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: ServerThread cleanup() start
+07/30/2024 02:31:14 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: ServerThread cleanup() end
+07/30/2024 02:31:14 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 2
+07/30/2024 02:31:14 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jelly[3] disconnected
+07/30/2024 02:31:14 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: Exited thread loop. Cleaning up connection
+07/30/2024 02:31:14 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: ServerThread cleanup() start
+07/30/2024 02:31:14 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jelly(3)]: ServerThread cleanup() end
+07/30/2024 02:31:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:31:16 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:31:16 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 2 recipients
+07/30/2024 02:31:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Thread being disconnected by server
+07/30/2024 02:31:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: ServerThread cleanup() start
+07/30/2024 02:31:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: ServerThread cleanup() end
+07/30/2024 02:31:16 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 1
+07/30/2024 02:31:16 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: john[2] disconnected
+07/30/2024 02:31:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Exited thread loop. Cleaning up connection
+07/30/2024 02:31:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: ServerThread cleanup() start
+07/30/2024 02:31:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: ServerThread cleanup() end
+07/30/2024 02:31:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:31:18 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/30/2024 02:31:18 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 1 recipients
+07/30/2024 02:31:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Thread being disconnected by server
+07/30/2024 02:31:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() start
+07/30/2024 02:31:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() end
+07/30/2024 02:31:18 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 0
+07/30/2024 02:31:18 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] disconnected
+07/30/2024 02:31:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Exited thread loop. Cleaning up connection
+07/30/2024 02:31:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() start
+07/30/2024 02:31:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() end
+07/30/2024 23:02:22 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Mute lists directory created or already exists: mute_lists
+07/30/2024 23:02:22 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/30/2024 23:02:22 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/30/2024 23:02:22 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/30/2024 23:02:22 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/30/2024 23:02:22 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 23:04:49 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 23:04:49 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 23:04:49 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 23:04:49 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 23:04:49 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 23:04:49 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/30/2024 23:04:49 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Loaded mute list for shah
+07/30/2024 23:04:49 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *shah[1] initialized*
+07/30/2024 23:04:49 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/30/2024 23:04:49 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] joined the Room[lobby]
+07/30/2024 23:04:54 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 23:04:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 23:04:54 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 23:04:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 23:04:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 23:04:54 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [john] Status [disconnect]
+07/30/2024 23:04:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Loaded mute list for john
+07/30/2024 23:04:54 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *john[2] initialized*
+07/30/2024 23:04:54 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 2 recipients
+07/30/2024 23:04:54 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: john[2] joined the Room[lobby]
+07/30/2024 23:05:00 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/30/2024 23:05:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/30/2024 23:05:00 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/30/2024 23:05:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/30/2024 23:05:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [maya] Status [disconnect]
+07/30/2024 23:05:00 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [maya] Status [disconnect]
+07/30/2024 23:05:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for maya. Starting with an empty list.
+07/30/2024 23:05:00 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *maya[3] initialized*
+07/30/2024 23:05:00 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 3 recipients
+07/30/2024 23:05:00 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: maya[3] joined the Room[lobby]
+07/30/2024 23:05:02 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[maya(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 23:05:02 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/30/2024 23:05:02 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hey
+07/30/2024 23:05:04 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 23:05:04 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 23:05:04 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/30/2024 23:05:08 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 23:05:08 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/30/2024 23:05:08 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hello
+07/30/2024 23:05:12 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 23:05:12 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [2] Message: [null]
+07/30/2024 23:05:12 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for shah
+07/30/2024 23:05:12 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m shah muted user: john
+07/30/2024 23:05:15 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 23:05:15 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 23:05:15 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/30/2024 23:05:15 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for shah due to being muted
+07/30/2024 23:05:20 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[maya(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 23:05:20 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/30/2024 23:05:20 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/31/2024 01:00:01 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MUTE] Client Id [2] Message: [null]
+07/31/2024 01:00:01 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [2] Message: [null]
+07/31/2024 01:00:59 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MUTE] Client Id [3] Message: [null]
+07/31/2024 01:00:59 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [3] Message: [null]
+07/31/2024 01:00:59 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for john
+07/31/2024 01:00:59 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m john muted user: maya
+07/31/2024 01:01:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[UNMUTE] Client Id [3] Message: [null]
+07/31/2024 01:01:16 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[UNMUTE] Client Id [3] Message: [null]
+07/31/2024 01:01:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for john
+07/31/2024 01:01:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m john unmuted user: maya
+07/31/2024 01:01:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[UNMUTE] Client Id [3] Message: [null]
+07/31/2024 01:01:26 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[UNMUTE] Client Id [3] Message: [null]
+07/31/2024 01:01:30 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[john(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/31/2024 01:01:30 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/31/2024 01:01:30 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/31/2024 01:01:30 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from john skipped for shah due to being muted
+07/31/2024 01:39:24 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Mute lists directory created or already exists: mute_lists
+07/31/2024 01:39:24 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/31/2024 01:39:24 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/31/2024 01:39:24 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/31/2024 01:39:24 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/31/2024 01:39:24 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 01:56:03 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Mute lists directory created or already exists: mute_lists
+07/31/2024 01:56:03 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/31/2024 01:56:03 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/31/2024 01:56:03 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/31/2024 01:56:03 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/31/2024 01:56:03 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 02:00:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Mute lists directory created or already exists: mute_lists
+07/31/2024 02:00:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/31/2024 02:00:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/31/2024 02:00:35 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/31/2024 02:00:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/31/2024 02:00:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 02:09:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Mute lists directory created or already exists: mute_lists
+07/31/2024 02:09:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/31/2024 02:09:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/31/2024 02:09:35 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/31/2024 02:09:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/31/2024 02:09:35 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 02:10:00 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/31/2024 02:10:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/31/2024 02:10:00 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 02:10:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/31/2024 02:10:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/31/2024 02:10:00 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/31/2024 02:10:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Loaded mute list for shah
+07/31/2024 02:10:00 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *shah[1] initialized*
+07/31/2024 02:10:00 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/31/2024 02:10:00 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] joined the Room[lobby]
+07/31/2024 02:10:05 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/31/2024 02:10:05 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/31/2024 02:10:05 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 02:10:05 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/31/2024 02:10:05 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [anika] Status [disconnect]
+07/31/2024 02:10:05 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [anika] Status [disconnect]
+07/31/2024 02:10:05 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for anika. Starting with an empty list.
+07/31/2024 02:10:05 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *anika[2] initialized*
+07/31/2024 02:10:05 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 2 recipients
+07/31/2024 02:10:05 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: anika[2] joined the Room[lobby]
+07/31/2024 02:10:11 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/31/2024 02:10:11 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/31/2024 02:10:11 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 2 recipients: hi
+07/31/2024 02:10:13 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[anika(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/31/2024 02:10:13 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hello]
+07/31/2024 02:10:13 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 2 recipients: hello
+07/31/2024 02:10:17 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [kita khobor]
+07/31/2024 02:10:17 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [kita khobor]
+07/31/2024 02:10:17 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 2 recipients: kita khobor
+07/31/2024 02:10:21 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[anika(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [bala asi]
+07/31/2024 02:10:21 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [bala asi]
+07/31/2024 02:10:21 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 2 recipients: bala asi
+07/31/2024 02:11:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[anika(2)]: Received from my client: Payload[MUTE] Client Id [1] Message: [null]
+07/31/2024 02:11:00 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [1] Message: [null]
+07/31/2024 02:11:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for anika
+07/31/2024 02:11:00 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m anika muted user: shah
+07/31/2024 02:11:03 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [why]
+07/31/2024 02:11:03 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [why]
+07/31/2024 02:11:03 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 2 recipients: why
+07/31/2024 02:11:03 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from shah skipped for anika due to being muted
+07/31/2024 02:20:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 02:20:26 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 02:20:26 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 2 recipients
+07/31/2024 02:20:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Thread being disconnected by server
+07/31/2024 02:20:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() start
+07/31/2024 02:20:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() end
+07/31/2024 02:20:26 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 1
+07/31/2024 02:20:26 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] disconnected
+07/31/2024 02:20:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Exited thread loop. Cleaning up connection
+07/31/2024 02:20:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() start
+07/31/2024 02:20:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: ServerThread cleanup() end
+07/31/2024 02:20:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[anika(2)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 02:20:29 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 02:20:29 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 1 recipients
+07/31/2024 02:20:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[anika(2)]: Thread being disconnected by server
+07/31/2024 02:20:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[anika(2)]: ServerThread cleanup() start
+07/31/2024 02:20:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[anika(2)]: ServerThread cleanup() end
+07/31/2024 02:20:29 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 0
+07/31/2024 02:20:29 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: anika[2] disconnected
+07/31/2024 02:20:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[anika(2)]: Exited thread loop. Cleaning up connection
+07/31/2024 02:20:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[anika(2)]: ServerThread cleanup() start
+07/31/2024 02:20:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[anika(2)]: ServerThread cleanup() end
+07/31/2024 02:41:27 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Mute lists directory created or already exists: mute_lists
+07/31/2024 02:41:27 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/31/2024 02:41:27 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/31/2024 02:41:27 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/31/2024 02:41:27 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/31/2024 02:41:27 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 02:41:46 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/31/2024 02:41:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/31/2024 02:41:46 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 02:41:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/31/2024 02:41:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/31/2024 02:41:46 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/31/2024 02:41:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Loaded mute list for shah
+07/31/2024 02:41:46 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *shah[1] initialized*
+07/31/2024 02:41:46 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/31/2024 02:41:46 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[1] joined the Room[lobby]
+07/31/2024 02:42:18 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/31/2024 02:42:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/31/2024 02:42:18 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 02:42:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/31/2024 02:42:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jenny] Status [disconnect]
+07/31/2024 02:42:18 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jenny] Status [disconnect]
+07/31/2024 02:42:18 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Loaded mute list for jenny
+07/31/2024 02:42:18 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *jenny[2] initialized*
+07/31/2024 02:42:18 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 2 recipients
+07/31/2024 02:42:18 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jenny[2] joined the Room[lobby]
+07/31/2024 02:42:26 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/31/2024 02:42:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/31/2024 02:42:26 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 02:42:26 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/31/2024 02:42:27 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [matt] Status [disconnect]
+07/31/2024 02:42:27 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [matt] Status [disconnect]
+07/31/2024 02:42:27 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for matt. Starting with an empty list.
+07/31/2024 02:42:27 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *matt[3] initialized*
+07/31/2024 02:42:27 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 3 recipients
+07/31/2024 02:42:27 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: matt[3] joined the Room[lobby]
+07/31/2024 02:42:36 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/31/2024 02:42:36 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/31/2024 02:42:36 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/31/2024 02:42:36 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from shah skipped for jenny due to being muted
+07/31/2024 02:42:50 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [#rhello everyoner#]
+07/31/2024 02:42:50 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [#rhello everyoner#]
+07/31/2024 02:42:50 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: <font color='red'>hello everyone</font>
+07/31/2024 02:42:50 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from shah skipped for jenny due to being muted
+07/31/2024 02:43:16 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [***_#gHELLOg#_***]
+07/31/2024 02:43:16 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [***_#gHELLOg#_***]
+07/31/2024 02:43:16 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: <b><i><u><font color='green'>HELLO</font></u></b></i>
+07/31/2024 02:43:24 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/31/2024 02:43:24 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/31/2024 02:43:24 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hey
+07/31/2024 02:43:41 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(2)]: Received from my client: Payload[MUTE] Client Id [1] Message: [null]
+07/31/2024 02:43:41 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [1] Message: [null]
+07/31/2024 02:43:45 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(2)]: Received from my client: Payload[UNMUTE] Client Id [1] Message: [null]
+07/31/2024 02:43:45 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[UNMUTE] Client Id [1] Message: [null]
+07/31/2024 02:43:45 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for jenny
+07/31/2024 02:43:45 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m jenny unmuted user: shah
+07/31/2024 02:43:50 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [okay boomer]
+07/31/2024 02:43:50 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [okay boomer]
+07/31/2024 02:43:50 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: okay boomer
+07/31/2024 02:43:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [LOL]
+07/31/2024 02:43:54 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [LOL]
+07/31/2024 02:43:54 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: LOL
+07/31/2024 02:44:02 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [huh]
+07/31/2024 02:44:02 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [huh]
+07/31/2024 02:44:02 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: huh
+07/31/2024 02:45:11 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(3)]: Received from my client: Payload[PRIVATE_MESSAGE] Client Id [1] Message: [jenny be weird]
+07/31/2024 02:45:11 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[PRIVATE_MESSAGE] Client Id [1] Message: [jenny be weird]
+07/31/2024 02:45:23 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(1)]: Received from my client: Payload[PRIVATE_MESSAGE] Client Id [3] Message: [i know right???]
+07/31/2024 02:45:23 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[PRIVATE_MESSAGE] Client Id [3] Message: [i know right???]
+07/31/2024 02:45:28 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(3)]: Received from my client: Payload[FLIP] Client Id [3] Message: [null]
+07/31/2024 02:45:28 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[FLIP] Client Id [3] Message: [null]
+07/31/2024 02:45:28 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: FLIP: matt flipped a coin and got heads
+07/31/2024 02:45:35 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(2)]: Received from my client: RollPayload[ROLL] Client Id [2] Quantity: [1] Sides: [1000] Simple: [true]
+07/31/2024 02:45:35 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: RollPayload[ROLL] Client Id [2] Quantity: [1] Sides: [1000] Simple: [true]
+07/31/2024 02:45:35 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: ROLL: jenny rolled 1000 and got 713
+07/31/2024 02:45:40 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenny(2)]: Received from my client: RollPayload[ROLL] Client Id [2] Quantity: [2] Sides: [9] Simple: [false]
+07/31/2024 02:45:40 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: RollPayload[ROLL] Client Id [2] Quantity: [2] Sides: [9] Simple: [false]
+07/31/2024 02:45:40 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: ROLL: jenny rolled 2d9 and got 9
+07/31/2024 13:24:09 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Mute lists directory created or already exists: mute_lists
+07/31/2024 13:24:09 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server Starting
+07/31/2024 13:24:09 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Listening on port 3000
+07/31/2024 13:24:09 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: created
+07/31/2024 13:24:09 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Created new Room lobby
+07/31/2024 13:24:09 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 13:24:46 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/31/2024 13:24:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/31/2024 13:24:46 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 13:24:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/31/2024 13:24:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jenna] Status [disconnect]
+07/31/2024 13:24:46 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [jenna] Status [disconnect]
+07/31/2024 13:24:46 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for jenna. Starting with an empty list.
+07/31/2024 13:24:46 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *jenna[1] initialized*
+07/31/2024 13:24:46 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 1 recipients
+07/31/2024 13:24:46 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jenna[1] joined the Room[lobby]
+07/31/2024 13:24:53 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/31/2024 13:24:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/31/2024 13:24:53 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 13:24:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/31/2024 13:24:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [matt] Status [disconnect]
+07/31/2024 13:24:53 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [matt] Status [disconnect]
+07/31/2024 13:24:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m No existing mute list found for matt. Starting with an empty list.
+07/31/2024 13:24:53 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *matt[2] initialized*
+07/31/2024 13:24:53 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 2 recipients
+07/31/2024 13:24:53 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: matt[2] joined the Room[lobby]
+07/31/2024 13:24:54 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Client connected
+07/31/2024 13:24:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(0)]: ServerThread created
+07/31/2024 13:24:54 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Waiting for next client
+07/31/2024 13:24:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Thread starting
+07/31/2024 13:24:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[null(-1)]: Received from my client: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/31/2024 13:24:54 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[CLIENT_CONNECT] Client Id [0] Message: [null] Client Name [shah] Status [disconnect]
+07/31/2024 13:24:54 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Loaded mute list for shah
+07/31/2024 13:24:54 [Project.Server.Server] ([32mINFO[0m):
+[34m>[0m Server: *shah[3] initialized*
+07/31/2024 13:24:54 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending room status to 3 recipients
+07/31/2024 13:24:54 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[3] joined the Room[lobby]
+07/31/2024 13:24:56 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/31/2024 13:24:56 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hey]
+07/31/2024 13:24:56 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hey
+07/31/2024 13:24:59 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenna(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/31/2024 13:24:59 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [hi]
+07/31/2024 13:24:59 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: hi
+07/31/2024 13:25:02 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [howdy]
+07/31/2024 13:25:02 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [howdy]
+07/31/2024 13:25:02 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: howdy
+07/31/2024 13:26:08 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: Received from my client: Payload[MUTE] Client Id [1] Message: [null]
+07/31/2024 13:26:08 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MUTE] Client Id [1] Message: [null]
+07/31/2024 13:26:08 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m Saved mute list for matt
+07/31/2024 13:26:08 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m matt muted user: jenna
+07/31/2024 13:26:15 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenna(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [heyyyy]
+07/31/2024 13:26:15 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [heyyyy]
+07/31/2024 13:26:15 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: heyyyy
+07/31/2024 13:26:15 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from jenna skipped for matt due to being muted
+07/31/2024 13:26:20 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [lol]
+07/31/2024 13:26:20 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [lol]
+07/31/2024 13:26:20 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: lol
+07/31/2024 13:26:29 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(3)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [huh]
+07/31/2024 13:26:29 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [huh]
+07/31/2024 13:26:29 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: huh
+07/31/2024 13:26:33 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [huh]
+07/31/2024 13:26:33 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [huh]
+07/31/2024 13:26:33 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: huh
+07/31/2024 13:26:35 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenna(1)]: Received from my client: Payload[MESSAGE] Client Id [0] Message: [what]
+07/31/2024 13:26:35 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[MESSAGE] Client Id [0] Message: [what]
+07/31/2024 13:26:35 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending message to 3 recipients: what
+07/31/2024 13:26:35 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Message from jenna skipped for matt due to being muted
+07/31/2024 13:26:51 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(3)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 13:26:51 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 13:26:51 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 3 recipients
+07/31/2024 13:26:51 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(3)]: Thread being disconnected by server
+07/31/2024 13:26:51 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(3)]: ServerThread cleanup() start
+07/31/2024 13:26:51 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(3)]: ServerThread cleanup() end
+07/31/2024 13:26:51 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 2
+07/31/2024 13:26:51 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: shah[3] disconnected
+07/31/2024 13:26:51 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(3)]: Exited thread loop. Cleaning up connection
+07/31/2024 13:26:51 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(3)]: ServerThread cleanup() start
+07/31/2024 13:26:51 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[shah(3)]: ServerThread cleanup() end
+07/31/2024 13:26:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenna(1)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 13:26:53 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 13:26:53 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 2 recipients
+07/31/2024 13:26:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenna(1)]: Thread being disconnected by server
+07/31/2024 13:26:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenna(1)]: ServerThread cleanup() start
+07/31/2024 13:26:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenna(1)]: ServerThread cleanup() end
+07/31/2024 13:26:53 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 1
+07/31/2024 13:26:53 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: jenna[1] disconnected
+07/31/2024 13:26:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenna(1)]: Exited thread loop. Cleaning up connection
+07/31/2024 13:26:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenna(1)]: ServerThread cleanup() start
+07/31/2024 13:26:53 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[jenna(1)]: ServerThread cleanup() end
+07/31/2024 13:26:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: Received from my client: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 13:26:55 [Project.Server.ServerThread] ([34mFINE[0m):
+[34m>[0m Received Payload: Payload[DISCONNECT] Client Id [0] Message: [null]
+07/31/2024 13:26:55 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: sending disconnect status to 1 recipients
+07/31/2024 13:26:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: Thread being disconnected by server
+07/31/2024 13:26:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: ServerThread cleanup() start
+07/31/2024 13:26:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: ServerThread cleanup() end
+07/31/2024 13:26:55 [Project.Server.Room] ([34mFINE[0m):
+[34m>[0m Clients remaining in Room: 0
+07/31/2024 13:26:55 [Project.Server.Room] ([32mINFO[0m):
+[34m>[0m Room[lobby]: matt[2] disconnected
+07/31/2024 13:26:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: Exited thread loop. Cleaning up connection
+07/31/2024 13:26:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: ServerThread cleanup() start
+07/31/2024 13:26:55 [Project.Server.ServerThread] ([32mINFO[0m):
+[34m>[0m ServerThread[matt(2)]: ServerThread cleanup() end

@@ -1,5 +1,6 @@
 package Project.Client.Views;
 
+import Project.Common.LoggerUtil;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -10,15 +11,12 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.ContainerEvent;
 import java.awt.event.ContainerListener;
 import java.util.HashMap;
-
 import javax.swing.Box;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
-
-import Project.Common.LoggerUtil;
 
 /**
  * UserListPanel represents a UI component that displays a list of users.
@@ -27,6 +25,9 @@ public class UserListPanel extends JPanel {
     private JPanel userListArea;
     private GridBagConstraints lastConstraints; // Keep track of the last constraints for the glue
     private HashMap<Long, UserListItem> userItemsMap; // Maintain a map of client IDs to UserListItems
+
+    private long lastSenderId = -1;
+
 
     /**
      * Constructor to create the UserListPanel UI.
@@ -172,6 +173,31 @@ public class UserListPanel extends JPanel {
             userListArea.removeAll();
             userListArea.revalidate();
             userListArea.repaint();
+        });
+    }
+    
+    public void updateUserMuteStatus(long clientId, boolean isMuted) {
+        SwingUtilities.invokeLater(() -> {
+            UserListItem item = userItemsMap.get(clientId);
+            if (item != null) {
+                item.setMuted(isMuted);
+            }
+        });
+    }
+
+    public void updateLastSender(long clientId) {
+        SwingUtilities.invokeLater(() -> {
+            if (lastSenderId != -1) {
+                UserListItem lastItem = userItemsMap.get(lastSenderId);
+                if (lastItem != null) {
+                    lastItem.setLastSender(false);
+                }
+            }
+            UserListItem newLastItem = userItemsMap.get(clientId);
+            if (newLastItem != null) {
+                newLastItem.setLastSender(true);
+            }
+            lastSenderId = clientId;
         });
     }
 }

@@ -3,7 +3,7 @@ package Project.Client.Views;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-
+import java.awt.Font;
 import javax.swing.BorderFactory;
 import javax.swing.JEditorPane;
 import javax.swing.JPanel;
@@ -16,6 +16,8 @@ import javax.swing.border.EmptyBorder;
  */
 public class UserListItem extends JPanel {
     private JEditorPane textContainer;
+    private boolean isMuted;
+    private boolean isLastSender;
 
     /**
      * Constructor to create a UserListItem.
@@ -47,9 +49,37 @@ public class UserListItem extends JPanel {
 
         this.setLayout(new BorderLayout());
         this.add(textContainer, BorderLayout.CENTER);
+
+        updateAppearance();
+
     }
 
-    public String getClientName() {
-        return textContainer.getText();
+    public void setMuted(boolean muted) {
+        this.isMuted = muted;
+        updateAppearance();
+    }
+
+    public void setLastSender(boolean lastSender) {
+        this.isLastSender = lastSender;
+        updateAppearance();
+    }
+
+    private void updateAppearance() {
+        if (isMuted) {
+            textContainer.setForeground(Color.RED);
+        } else {
+            textContainer.setForeground(Color.BLACK);
+        }
+
+        if (isLastSender) {
+            textContainer.setFont(textContainer.getFont().deriveFont(Font.BOLD));
+            this.setBorder(BorderFactory.createLineBorder(Color.BLUE, 2));
+        } else {
+            textContainer.setFont(textContainer.getFont().deriveFont(Font.PLAIN));
+            this.setBorder(BorderFactory.createEmptyBorder());
+        }
+
+        this.revalidate();
+        this.repaint();
     }
 }
